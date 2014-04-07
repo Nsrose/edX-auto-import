@@ -1,0 +1,21 @@
+<problem markdown="null" display_name="Quiz 19.4" showanswer="finished">
+  <p>In the script using 'compose' in Dan's demo, if instead of:</p>
+  <p>compose (first word) (all but first) of 'Build Your Own Blocks'</p>
+  <p>We had:</p>
+  <p>compose (item 2 of) (sentence to list) of 'Build Your Own Blocks'</p>
+  <p>What would this return?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">Your, as before</choice>
+      <choice correct="false">Own</choice>
+      <choice correct="false">s</choice>
+      <choice correct="false">Build Your Own Blocks</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The sentence to list block takes it's word in our sentence and makes it an item of a list. In our case, we would get a list as so: [Build, Your, Own, Blocks]. Then the second item of that list is called, so the compose function returns 'Your'.</p>
+    </div>
+  </solution>
+</problem>

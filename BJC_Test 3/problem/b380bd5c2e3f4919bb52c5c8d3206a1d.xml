@@ -1,0 +1,16 @@
+<problem markdown="Which of the following statements about recursion is true when assuming the worst case run time for a recursive function?&#10;     ( ) Recursion is often used to improve run time of code.&#10;     ( ) Recursive functions have logarithmic run time.&#10;     (x) Recursion can never run in constant time.&#10;     &#10;[explanation]&#10;Recursive functions, although elegant, cannot run in constant time due to the fact that they call themselves.&#10;[explanation]&#10;" display_name="Recursion summary" showanswer="finished">
+  <p>Which of the following statements about recursion is true when assuming the worst case run time for a recursive function?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Recursion is often used to improve run time of code.</choice>
+      <choice correct="false">Recursive functions have logarithmic run time.</choice>
+      <choice correct="true">Recursion can never run in constant time.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Recursive functions, although elegant, cannot run in constant time due to the fact that they call themselves.</p>
+    </div>
+  </solution>
+</problem>

@@ -1,0 +1,17 @@
+<problem markdown="Which of the following describes Runtime best? Check all that apply.&#10;     [x] Measures how long a function takes to report  in the worst case&#10;     [x] Measures the efficiency of a function&#10;     [ ] Checks the style of the functions&#10;     [ ] All of the above&#10;     &#10;[explanation]&#10;The runtime of a function can tell us how long a function will take to report depending on it's input. This is importnant to know when we want to know the worst or best runtime of a function to make it more efficient.&#10;[explanation]&#10;" display_name="Quiz 7.3" showanswer="finished">
+  <p>Which of the following describes Runtime best? Check all that apply.</p>
+  <choiceresponse>
+    <checkboxgroup direction="vertical">
+      <choice correct="true">Measures how long a function takes to report  in the worst case</choice>
+      <choice correct="true">Measures the efficiency of a function</choice>
+      <choice correct="false">Checks the style of the functions</choice>
+      <choice correct="false">All of the above</choice>
+    </checkboxgroup>
+  </choiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The runtime of a function can tell us how long a function will take to report depending on it's input. This is importnant to know when we want to know the worst or best runtime of a function to make it more efficient.</p>
+    </div>
+  </solution>
+</problem>

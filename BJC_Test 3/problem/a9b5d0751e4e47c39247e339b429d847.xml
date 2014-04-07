@@ -1,0 +1,12 @@
+<problem markdown="In this comparison, which computer part is analogous to short term memory?&#10;&#10;[[Motherboard, CPU/Processor, (RAM), Video Card, Power Supply, Hard Disk, Optical Drive]]&#10;&#10;[explanation]&#10;The Random Access Memory is similar to short term memory because it contains most of the current information on the computer. This includes data necessary for future CPU computations.&#10;[explanation]&#10;" display_name="Question" showanswer="finished">
+  <p>In this comparison, which computer part is analogous to short term memory?</p>
+  <optionresponse>
+    <optioninput options="('Motherboard','CPU/Processor','RAM','Video Card','Power Supply','Hard Disk','Optical Drive')" correct="RAM"/>
+  </optionresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The Random Access Memory is similar to short term memory because it contains most of the current information on the computer. This includes data necessary for future CPU computations.</p>
+    </div>
+  </solution>
+</problem>

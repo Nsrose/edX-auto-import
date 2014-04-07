@@ -1,0 +1,17 @@
+<problem markdown="What would a “truly intelligent” AI system look like?&#10;     ( ) Behaves in an optimal or rational manner &#10;     ( ) Can do the same things people do (and makes the same kinds of mistakes people make) &#10;     ( ) Carries out the same type of processing (mental representations) people do – i.e., thinks like people &#10;     (x) Depends on the circumstances &#10;     &#10;[explanation]&#10;Certainly (a) is the most useful, but there are times when (b) is useful -- say, when it makes mistakes. If it says the wrong word, it says something close to what people do, it's easier to respond to. (c) is useful for cognitive science, and machine learning has influenced and been influenced by cognitive science.&#10;[explanation]&#10;" display_name="Quiz 20.5" showanswer="answered">
+  <p>What would a “truly intelligent” AI system look like?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Behaves in an optimal or rational manner </choice>
+      <choice correct="false">Can do the same things people do (and makes the same kinds of mistakes people make) </choice>
+      <choice correct="false">Carries out the same type of processing (mental representations) people do – i.e., thinks like people </choice>
+      <choice correct="true">Depends on the circumstances </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Certainly (a) is the most useful, but there are times when (b) is useful -- say, when it makes mistakes. If it says the wrong word, it says something close to what people do, it's easier to respond to. (c) is useful for cognitive science, and machine learning has influenced and been influenced by cognitive science.</p>
+    </div>
+  </solution>
+</problem>

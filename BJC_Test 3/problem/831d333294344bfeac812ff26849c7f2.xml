@@ -1,0 +1,20 @@
+<problem markdown="Which of the following is NOT a great example of abstraction, from what you've learned so far?&#10;&#10;     ( ) A traffic light's color for a driver.&#10;     (x) The height of a singer for a recruiter.&#10;     ( ) Google's search results page.&#10;     ( ) An elevator pitch for a screenplay.&#10;     ( ) None of the above&#10;     ( ) All of the above&#10;     &#10;[explanation]&#10;From all the examples above, only the second one serves as a bad example of abstraction. The color of a traffic light is important to let the driver know when to stop, start or slow down and to avoid crashing. Google provides a brief summary of each match so that you can choose the link you want. An elevator pitch is the perfect example of figuring out the big ideas of a screenplay.&#10;&#10;The height of a singer is probably not as important as the quality of his voice or singing experience for the recruiter to take into consideration.&#10;[explanation]&#10;" display_name="Quiz 1.2" showanswer="finished">
+  <p>Which of the following is NOT a great example of abstraction, from what you've learned so far?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">A traffic light's color for a driver.</choice>
+      <choice correct="true">The height of a singer for a recruiter.</choice>
+      <choice correct="false">Google's search results page.</choice>
+      <choice correct="false">An elevator pitch for a screenplay.</choice>
+      <choice correct="false">None of the above</choice>
+      <choice correct="false">All of the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>From all the examples above, only the second one serves as a bad example of abstraction. The color of a traffic light is important to let the driver know when to stop, start or slow down and to avoid crashing. Google provides a brief summary of each match so that you can choose the link you want. An elevator pitch is the perfect example of figuring out the big ideas of a screenplay.</p>
+      <p>The height of a singer is probably not as important as the quality of his voice or singing experience for the recruiter to take into consideration.</p>
+    </div>
+  </solution>
+</problem>

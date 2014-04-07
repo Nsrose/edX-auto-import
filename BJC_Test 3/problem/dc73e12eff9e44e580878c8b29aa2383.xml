@@ -1,0 +1,15 @@
+<problem markdown="Did you complete this reading?&#10;(x) Yes!&#10;( ) Not yet&#10;&#10;[explanation] Finish this reading before you move on. [explanation] " max_attempts="null" weight="null" display_name="Check Box" rerandomize="never" showanswer="always" start="2013-02-19T10:45:00Z">
+  <p>Did you complete this reading?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">Yes!</choice>
+      <choice correct="false">Not yet</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p> Finish this reading before you move on. </p>
+    </div>
+  </solution>
+</problem>

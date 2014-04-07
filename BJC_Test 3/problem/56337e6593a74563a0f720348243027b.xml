@@ -1,0 +1,20 @@
+<problem markdown="1. What is the value of x at the end of the script above?&#10;= 12&#10;&#10;2. What is the value of y at the end of the script above?&#10;= -1&#10;&#10;3. What will the sprite say?&#10;= -224&#10;&#10;[explanation]&#10;You can join two numbers and get another number.&#10;[explanation]&#10;" display_name="Test Yourself">
+  <p>1. What is the value of x at the end of the script above?</p>
+  <numericalresponse answer="12">
+    <formulaequationinput/>
+  </numericalresponse>
+  <p>2. What is the value of y at the end of the script above?</p>
+  <numericalresponse answer="-1">
+    <formulaequationinput/>
+  </numericalresponse>
+  <p>3. What will the sprite say?</p>
+  <numericalresponse answer="-224">
+    <formulaequationinput/>
+  </numericalresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>You can join two numbers and get another number.</p>
+    </div>
+  </solution>
+</problem>

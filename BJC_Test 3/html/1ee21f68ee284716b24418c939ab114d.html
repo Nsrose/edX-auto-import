@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+      <script type="text/javascript" src="https://dl.dropbox.com/u/1132921/Snap/morphic.js"></script>
+		<script type="text/javascript" src="https://dl-web.dropbox.com/get/edX/Snap/widgets.js?w=AAC0bqNZFt6LWChjVPcddeRuLlFNWkB7-_QNMhS0Ou4nKQ"></script>
+		<script type="text/javascript" src="https://dl-web.dropbox.com/get/edX/Snap/blocks.js?w=AAAcV_9KtqAcZ35je-kHw3v_nKrq5p5cEOFjX-8t1qL0xA"></script>
+		<script type="text/javascript" src="https://dl-web.dropbox.com/get/edX/Snap/threads.js?w=AABum-0YNzBUDamVMvJLGdbg8gGxChRLIoqr6M0JZLTXsg"></script>
+		<script type="text/javascript" src="https://dl-web.dropbox.com/get/edX/Snap/objects.js?w=AACTlUotbkn3xkbLjACmTImcEnnOrrP85LGLcpw6GHRwbg"></script>
+		<script type="text/javascript" src="https://dl.dropbox.com/u/1132921/Snap/gui.js"></script>
+		<script type="text/javascript" src="https://dl-web.dropbox.com/get/edX/Snap/lists.js?w=AABy3ksB2ZVbEOLRtNLDyvKK7RsFbBH18I_UkkV3TqZ4ew"></script>
+		<script type="text/javascript" src="https://dl-web.dropbox.com/get/edX/Snap/byob.js?w=AADIxR9qNjEW-1nPwXQkrkVCV457CaKAJsLz9Iq1IAoxOw"></script>
+		<script type="text/javascript" src="https://dl-web.dropbox.com/get/edX/Snap/xml.js?w=AACwMtmtiWvhEi4Mg20gwNuMY5iJtzPbv1YkSzgr0KPiAA"></script>
+		<script type="text/javascript" src="https://dl-web.dropbox.com/get/edX/Snap/store.js?w=AADbVGJ6O37YsKZzBp0ou94Dw2L0uc9stGfSfmbbIopQ3A"></script>
+		<script type="text/javascript" src="https://dl-web.dropbox.com/get/edX/Snap/locale.js?w=AABl7VrZIXzEJjf0SYjy-usb-moAcYJiwzBs_RcG2ksIpA"></script>
+		<script type="text/javascript" src="https://dl-web.dropbox.com/get/edX/Snap/cloud.js?w=AAC4wLlThQ-XTSMBvW6aFwBjAZhH-Q4RtmlXNgZSMa6aGw"></script>
+		<script type="text/javascript" src="https://dl-web.dropbox.com/get/edX/Snap/sha512.js?w=AAAUGLB3n5G0ZZxSUvvZ7hZXQA5Tpnp2bmqNvk636bCuwQ"></script>
+      <style>
+        .snapcontainer {
+          height: 600px;
+          width: 800px;
+          overflow: hidden;
+          margin: 0 auto;
+        }
+      </style>
+      <script type="text/javascript">			
+			var world;
+			window.onload = function () {
+				world = new WorldMorph(document.getElementById('world'));
+				new IDE_Morph().openIn(world);
+				setInterval(loop, 50);
+			};
+			function loop() {
+				world.doOneCycle();
+			}
+		</script>
+	</head>
+	<body>
+      <div class="snapcontainer">
+		<!--
+        
+        <canvas class="snapcontainer" id="world" tabindex="1" width="800" height="600"></canvas>
+
+-->
+      </div>
+    </body>
+</html>

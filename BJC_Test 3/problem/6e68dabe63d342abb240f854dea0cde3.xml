@@ -1,0 +1,17 @@
+<problem markdown="What percentage of students in the online lecture do you estimate answered they got the majority or all of their music from online?&#10;     ( ) 11%&#10;     ( ) 30%&#10;     ( ) 50%&#10;     (x) 68%&#10;&#10;     &#10;[explanation]&#10;The final statistics showed that 5% bought all their music, 7% ripped their music from their own CD's, 19% bought most of their music, 39% downloaded most of their music, and 29% downloaded all their music.&#10;[explanation]&#10;" display_name="Multiple Choice" showanswer="finished">
+  <p>What percentage of students in the online lecture do you estimate answered they got the majority or all of their music from online?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">11%</choice>
+      <choice correct="false">30%</choice>
+      <choice correct="false">50%</choice>
+      <choice correct="true">68%</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The final statistics showed that 5% bought all their music, 7% ripped their music from their own CD's, 19% bought most of their music, 39% downloaded most of their music, and 29% downloaded all their music.</p>
+    </div>
+  </solution>
+</problem>

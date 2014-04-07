@@ -1,0 +1,11 @@
+<problem markdown="Select all that would be good applications for MapReduce:&#10;     [x] Google search&#10;     [x] Finding the number of times &quot;the&quot; appears in Hawthorne's &quot;The Scarlet Letter.&quot;&#10;     [x] Finding the most used word in a set of Tweets&#10;     [] Running a desktop application (i.e. Microsoft Word, Adobe Photoshop, web browsers, etc.)" display_name="Multiple Choice">
+  <p>Select all that would be good applications for MapReduce:</p>
+  <choiceresponse>
+    <checkboxgroup direction="vertical">
+      <choice correct="true">Google search</choice>
+      <choice correct="true">Finding the number of times "the" appears in Hawthorne's "The Scarlet Letter."</choice>
+      <choice correct="true">Finding the most used word in a set of Tweets</choice>
+      <choice correct="false">Running a desktop application (i.e. Microsoft Word, Adobe Photoshop, web browsers, etc.)</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

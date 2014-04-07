@@ -1,0 +1,23 @@
+<problem markdown="null" display_name="Quiz 9.3" showanswer="finished">
+  <p>Which of the following iterative scripts do and return the same thing as the recursive function below?</p>
+  <img src="http://tinyurl.com/ockxxdj"/>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">
+        <img src="http://tinyurl.com/p798dqx"/>
+      </choice>
+      <choice correct="false">
+        <img src="http://tinyurl.com/p5ur72o"/>
+      </choice>
+      <choice correct="false">
+        <img src="http://tinyurl.com/nobvc5e"/>
+      </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The recursive function returns the sum of all the numbers starting from the 'min' all the way and inclusing the 'max'. The secind iterative option double counts the min and the third computes a completely dufferent thing. Specifically, it find the sum of the differences between the 'max' and 'min' number as we increment 'min'.</p>
+    </div>
+  </solution>
+</problem>

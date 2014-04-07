@@ -1,0 +1,17 @@
+<problem markdown="null" display_name="Quiz 19.3" showanswer="finished">
+  <p>If instead of 'join (item) (#)' we had 'join (item) (# - 1)', what would this return?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Hello1 CS1 101, as before</choice>
+      <choice correct="false">Hello, CSHello, 10CS</choice>
+      <choice correct="false">0Hello, 1CS, 210</choice>
+      <choice correct="true">Hello0, CS1, 102</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The new join will join each item first <b>and then</b> the number of the each item's position minus 1.</p>
+    </div>
+  </solution>
+</problem>

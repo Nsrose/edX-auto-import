@@ -1,0 +1,11 @@
+<h1>Timing Sum-thing's Up</h1>
+<div>
+<p>We will now see an example where the runtime of an algorithm really does make a difference. Remember the game you played with young Gauss at the beginning of lab? We will implement the game in Snap!.
+Earlier in the lab, you made a block that returned the sum of numbers between 1 and max. In the Variables menu, you will see two blocks:</p>
+<div style="margin-left: 40px;"><img style="width: 241px; height: 61px;" alt="add all numbers in list" src="http://inst.eecs.berkeley.edu/~cs10/labs/img/list/add-numbers-to-list-blocks.png" /></div>
+<br />
+<p>The first block sums up the numbers in the numbers list the normal, "non-Gauss" way: walking through the list and adding the numbers one by one. The second block sums up the numbers the "Gauss" way: using the formula (N + 1) * N/2, where, in this case, N is the same as max. (<a href="http://inst.eecs.berkeley.edu/~cs10/labs/cur/programming/algorithms/competing-with-young-gauss.html" target="_blank">How did we get this formula?</a>) Complete the bodies of these blocks.</p>
+<p>Once you are done, drag the first block (the "non-Gauss" block) onto the stage and place it immediately after the add all numbers between 1 and max block. Also, move the reset timer block <em>after</em> the add all numbers between 1 and max block, since we only need to time how long the "non-Gauss" block takes to sum the numbers in the numbers list.</p>
+<p>Now, run the script with max set to 10. Again, run it a few times to get an idea of the average time the computer takes to sum the numbers up. Repeat the experiment with max set to 20, 40, 100, and 1000. Based on your observations, what kind of runtime does the "non-Gauss" block have: constant, linear, or neither? Why do you think this is the case?</p>
+<p>Replace the "non-Gauss" block with the "Gauss" block. Once more, run the script with max set to 10. Again, run it a few times to get an idea of the average time the computer takes to sum the numbers up. Repeat the experiment with max set to 20, 40, 100, and 1000. Based on your observations, what kind of runtime does the "Gauss" block have: constant, linear, or neither? Why do you think this is the case?</p>
+</div>

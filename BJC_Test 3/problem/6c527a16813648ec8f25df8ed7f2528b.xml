@@ -1,0 +1,17 @@
+<problem markdown="null" display_name="Numerical Input">
+  <p>Question 1</p>
+  <p>Someone wrote the following code to draw a tree. When they drew the picture in the center, what number did they put in for the levels argument? In other words, what goes in the blank in the code on the right?</p>
+  <img src="http://bjc.berkeley.edu/bjc-r/img/lab-10/tree-code-snap.png" alt="There should be an image here" title="There should be an image here"> </img>
+  <img src="http://bjc.berkeley.edu/bjc-r/img/recur/tree-level5.jpg" alt="There should be an image here" title="There should be an image here"> </img>
+  <img src="http://bjc.berkeley.edu/bjc-r/img/recur/tree-size-100-call.gif" alt="There should be an image here" title="There should be an image here"> </img>
+  <p>When they drew the picture in the center, what number did they put in for the levels argument? In other words, what goes in the blank in the code on the right?:</p>
+  <numericalresponse answer="5">
+    <formulaequationinput/>
+  </numericalresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>There are five different sizes of line segments in the picture.</p>
+    </div>
+  </solution>
+</problem>

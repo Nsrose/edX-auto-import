@@ -1,0 +1,762 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+      <!-- NOTE: For future proofing try to avoid using <tt> and <b> and <i> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="shortcut icon" href="http://bjc.berkeley.edu/bjcfav.png" type="image/png">
+      <link href="../scripts/cs10style.css" title="CS10 Style" rel="stylesheet" type="text/css" />
+      <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  </head>
+  <body>
+    <a name="schedule"></a>
+    <!--beginning of semester calendar code-->
+    <table width="100%" border="0" onload="updateCalendar()" cellpadding="0" cellspacing="0" class="calendar">
+        <thead>
+            <tr>
+                <th width="2%">
+                    Week
+                </th>
+                <th width="8%">
+                    Dates
+                </th>
+                <th width="9%">
+                    Readings (Sa/Su)
+                </th>
+                <th width="12%">
+                    Lecture 1 (M)
+                </th>
+                <th width="12%">
+                    Lab 1 (M/Tu/W)
+                </th>
+                <th width="12%">
+                    Lecture 2 (W)
+                </th>
+                <th width="12%">
+                    Lab 2 (W/Th/F)
+                </th>
+                <th width="12%">
+                    Discussion (F)
+                </th>
+                <th width="9%">
+                    HW &amp; Projects
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="cal">
+                <td>
+                    1
+                </td>
+                <td>
+                    08-26 to 08-30
+                </td>
+                <td id="8" title="26">
+                    <br />
+                </td>
+                <td id="8" title="26,27,28" colspan="3" class="noClass">
+                    No Class
+                </td>
+                <td id="8" title="29">
+                    <strong><a href="http://bjc.berkeley.edu/bjc-r/topic/topic.html?topic=berkeley_bjc/intro/broadcast-animations-music.topic&amp;novideo=true&amp;noreading=true&amp;nohomework=true&amp;course=berkeley_bjc.html" target="_blank">Broadcast, Animations, Music</a></strong> Watch a TA do the lab <a href="http://www.youtube.com/watch?v=Aub6BAxAT-c&amp;list=PLAE5AE3CD22628741&amp;index=1&amp;feature=plpp_video" target="_blank"> here</a>.
+                </td>
+                <td id="8" title="30">
+                    Welcome and Course Overview
+                </td>
+                <td id="8" title="31">
+                    None
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    2
+                </td>
+                <td>
+                    09-02 to 09-06
+                </td>
+                <td id="9" title="1">
+                    <a class="reading required" href="http://inst.eecs.berkeley.edu/%7Ecs10/sp11/lec/01/2010-08-30-CS10-L01-BH-Abstraction.txt">Prof. Harvey's Intro to Abstraction</a><br />
+                    <a class="reading bspace" href="http://online.wsj.com/article/SB10001424053111903480904576512250915629460.html">Why Software is Eating the World</a><br />
+                    <a class="reading optional" href="http://doi.acm.org/10.1145/1232743.1232745">Is Abstraction the Key to Computing?</a><br />
+                    <a class="reading optional" href="http://doi.acm.org/10.1145/1592761.1592779">Scratch: Programming for All</a>
+                </td><!--Week 2-->
+                <td class="noClass" id="9" title="2">
+                    No Lecture, Labor Day
+                </td>
+                <td id="9" title="3,4">
+                    <strong><a href="http://bjc.eecs.berkeley.edu/bjc-r/topic/topic.html?topic=berkeley_bjc/intro/loops-variables-conditionals.topic&amp;novideo=true&amp;noreading=true&amp;nohomework=true&amp;course=berkeley_bjc.html">Loops, Variables, and Conditionals</a></strong><br />
+                    Watch a TA do the lab <a href="http://www.youtube.com/watch?v=rn6mlhS6ZdY&amp;feature=bf_next&amp;list=PLAE5AE3CD22628741">here</a>.
+                    <br />
+                </td>
+                <td id="9" title="4">
+                    <a href="lec/01/">Welcome; Abstraction (DG)</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/7">Sp12 HD video with Qs</a>
+                </td>
+                <td id="9" title="4,5,6">
+                    <strong><a href="http://bjc.eecs.berkeley.edu/bjc-r/topic/topic.html?topic=berkeley_bjc/intro/putting-it-together.topic&amp;novideo=true&amp;noreading=true&amp;nohomework=true&amp;course=berkeley_bjc.html">Random, If, &amp; Input</a></strong><br />
+                    Watch a TA do the lab <a href="http://www.youtube.com/watch?v=YGen0fAO0Y8&amp;feature=bf_next&amp;list=PLAE5AE3CD22628741">here</a>.
+                    <br />
+                    <strong>Reading Quiz (in-lab)</strong>
+                </td>
+                <td id="9" title="6">
+                    <!-- <a href="http://ucoe.adobeconnect.com/p5ezwwtw8g2/"></a> -->
+                    Anatomy of a Computer<br />
+                    The Power of Binary<br />
+                    (<a href="disc/Disc_2.pdf">slides</a>)
+                </td>
+                <td class="due" id="9" title="6">
+                    Homework 0<br />
+                    <a href="hw/hw0.pdf">PDF Version</a><br />
+                    <a href="hw/hw0.docx">Word Version</a><br />
+                    <i>due 09/06</i>
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    3
+                </td>
+                <td>
+                    09-09 to 09-13
+                </td>
+                <td id="9" title="7,8">
+                    <a class="reading required" href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter1.pdf">BtB Chapter 1</a><br />
+                    <a class="reading required" href="http://youtu.be/JKAzZocdQ1Y">Program or Be Programmed (Video: Author Speech)</a><br />
+                    <a class="reading optional" href="http://www.wired.com/magazine/2010/05/process_pixar/">Animating a Blockbuster</a>
+                </td><!--Week 3-->
+                <td id="9" title="9">
+                    <a href="lec/02">3D Graphics (D)</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/10">Sp12 HD video with Qs</a>
+                </td>
+                <td id="9" title="9,10,11">
+                    <a href="hw/hw1.html">Homework 1</a> Help<br />
+                    <strong>Reading Quiz (in-lab)</strong>
+                </td>
+                <td id="9" title="11">
+                    <p>
+                        <span><a href="lec/03/">Functions (D)</a><br />
+                        <a target="_blank" href="https://coursesharing.org/courses/6/lectures/12">Sp12 HD video with Qs</a></span>
+                    </p>
+                </td>
+                <td id="9" title="11,12,13">
+                    <a href="../labs/topic/topic.html?topic=berkeley_bjc/intro/building-blocks.topic&amp;novideo=true&amp;noreading=true&amp;nohomework=true&amp;course=berkeley_bjc.html"><strong>Build Your Own Blocks</strong></a><br />
+                    Watch a TA do the lab <a href="http://www.youtube.com/watch?v=Sm_ZGLT72yQ&amp;feature=bf_next&amp;list=PLAE5AE3CD22628741">here</a>.
+                    <br />
+                </td>
+                <td id="9" title="13">
+                    Functions<br />
+                    <a target="_blank" href="https://docs.google.com/presentation/d/1V-WyFaL1AmUSBlQEwu8me0q9-kyXIbfHis_onhBLGho/present?pli=1&amp;ueb=true#slide=id.g103b1a6e7_0111">(Slides 1)</a><br />
+                    <a target="_blank" href="https://docs.google.com/document/d/13WMkX5intJF15pRwDoAFR58E5WQlsL4n0jHXeNt4cZc/edit?pli=1">(Handout 1)</a><br />
+                    <a target="_blank" href="https://docs.google.com/document/d/1cmWr7z-hMQ7dq-Jd9ao5iXF1knGQGoQbKr9Ji1ErBww/edit?pli=1">(Handout 2)</a><br />
+                </td>
+                <td class="due" id="9" title="13">
+                    <a href="hw/hw1.html">Homework 1</a><br />
+                    <i>due 09/13</i>
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    4
+                </td>
+                <td>
+                    09-16 to 09-20
+                </td>
+                <td id="9" title="14,15">
+                    <a class="reading required" href="http://doi.acm.org/10.1145/1378704.1378719">Designing Games with a Purpose (GWAP)</a><br />
+                    <a class="reading required" href="http://www.nytimes.com/2011/06/28/us/28scotus.html">Justices Split on Violent Games</a><br />
+                    <a class="reading required" target="_blank" href="https://coursesharing.org/courses/6/lectures/11">Video Games Lecture</a> <a class="reading required" target="_blank" href="http://inst.eecs.berkeley.edu/~cs10/sp12/lec/03/">(Slides)</a><br />
+                    <a class="reading required" target="_blank" href="http://youtu.be/CQhrMmbiaM0">The Story of Alan Turing &amp; His Machine</a><br />
+                    <a class="reading optional" href="http://inst.eecs.berkeley.edu/%7Ecs10/fa10/readings/videogames/extra/">More readings on video games</a><br />
+                    <a class="reading optional" href="http://www.msnbc.msn.com/id/40077373/ns/technology_and_science-games/">Kinect's Future a Game Controller in Everything</a>
+                </td><!--Week 4-->
+                <td id="9" title="16">
+                    <a href="lec/04">Creativity and Abstraction</a> (D)<br />
+                </td>
+                <td id="9" title="16,17,18">
+                    <a href="http://bjc.eecs.berkeley.edu/bjc-r/topic/topic.html?topic=berkeley_bjc/lists/lists-I.topic&amp;novideo=true&amp;noreading=true&amp;nohomework=true&amp;course=berkeley_bjc.html"><strong>Lists I</strong></a><br />
+                    Watch a TA do the lab <a href="http://www.youtube.com/watch?v=8549sTGQwLQ&amp;feature=bf_next&amp;list=PLAE5AE3CD22628741">here</a>.
+                    <br />
+                    <strong>Reading Quiz (in-lab)</strong>
+                </td>
+                <td id="9" title="18">
+                    <a href="lec/05/">Programming Paradigms</a> (D)<br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/13">Sp12 HD video with Qs</a><br />
+                    <a target="_blank" href="http://www.youtube.com/watch?v=CQhrMmbiaM0">Extra Lecture Video</a>
+                </td>
+                <td id="9" title="18,19,20">
+                    <a href="../labs/topic/topic.html?topic=berkeley_bjc/lists/tic-tac-toe.topic&amp;novideo=true&amp;noreading=true&amp;nohomework=true&amp;course=berkeley_bjc.html"><strong>Lists II</strong></a><br />
+                    Watch a TA do the lab <a href="http://www.youtube.com/watch?v=lhuEMtcPgB8&amp;feature=bf_next&amp;list=PLAE5AE3CD22628741">here</a>.
+                </td>
+                <td id="9" title="20">
+                    Lists
+                </td>
+                <td class="due" id="9" title="20">
+                    <a href="hw/hw2.html">Homework 2</a><br />
+                    <i>due 09/20</i>
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    5
+                </td>
+                <td>
+                    09-23 to 09-27
+                </td>
+                <td id="9" title="22">
+                    <a class="required" href="http://www.gotw.ca/publications/concurrency-ddj.htm"></a> No readings this week<br />
+                    <br />
+                    <strong>Quest Review</strong><br />
+                    Sun. 9/22 12-3PM, 2050 VLSB
+                </td><!--Week 5-->
+                <td id="9" title="23">
+                    <a href="lec/06/">Algorithms I (G)</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/14">Sp12 HD video with Qs</a>
+                </td>
+                <td id="9" title="23,24,25">
+                    <a href="http://sage.cs.berkeley.edu/course/view.php?id=21&amp;topic=8"></a> Review HOFs<br />
+                    Finish Lists I + II<br />
+                </td>
+                <td class="exam" id="9" title="25">
+                    <a href="exams/quest/">Quest</a> (in-class exam)
+                </td>
+                <td id="9" title="25,26,27">
+                    <strong><a href="http://inst.eecs.berkeley.edu/~cs10/labs/topic/topic.html?topic=berkeley_bjc/areas/algorithms.topic&amp;novideo=true&amp;noreading=true&amp;course=berkeley_bjc.html">Algorithms</a></strong><br />
+                    Watch a TA do the lab <a href="http://www.youtube.com/watch?v=-Pu-B85uCKU&amp;feature=bf_next&amp;list=PLAE5AE3CD22628741">here</a>.
+                    <br />
+                </td>
+                <td id="9" title="27">
+                    <a href="http://ucoe.adobeconnect.com/p50gq02sada/"></a> Go Over Quest Solutions<br />
+                    Homework 3 Overview
+                </td>
+                <td id="9" title="27">
+                    None
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    6
+                </td>
+                <td>
+                    09-30 to 10-04
+                </td>
+                <td id="9" title="28,29">
+                    <a class="reading required" href="http://www.ted.com/talks/kevin_slavin_how_algorithms_shape_our_world.html">How Algorithms Shape Our World</a><br />
+                    <a class="reading required" href="http://computer.howstuffworks.com/moores-law.htm">How Moore's Law Works</a><br />
+                    <a class="reading hard" href="http://www.gotw.ca/publications/concurrency-ddj.htm">Free Lunch is Over</a><br />
+                    <a class="reading optional" href="http://doi.acm.org/10.1145/1506409.1506425">Spending Moore's dividend (CACM)</a>
+                </td><!--Week 6-->
+                <td id="9" title="30">
+                    <a href="lec/07">Algorithms II,<br />
+                    Orders of Growth (G)</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/15">Sp12 HD video with Qs</a>
+                </td>
+                <td id="10" title="1,2">
+                    <strong><a href="http://inst.eecs.berkeley.edu/~cs10/labs/topic/topic.html?topic=berkeley_bjc/areas/algorithm-complexity.topic&amp;novideo=true&amp;noreading=true&amp;noassignment=true&amp;course=berkeley_bjc.html">Algorithmic Complexity</a></strong><br />
+                    Watch a TA do the lab <a href="http://www.youtube.com/watch?v=7WBC-d7NqnI&amp;feature=bf_next&amp;list=PLAE5AE3CD22628741">here</a>.
+                    <br />
+                </td>
+                <td id="10" title="2">
+                    <a href="lec/08">Concurrency (G)</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/16">Sp12 HD video with Qs</a><br />
+                </td>
+                <td id="10" title="2,3,4">
+                    <a href="http://inst.eecs.berkeley.edu/~cs10/labs/topic/topic.html?topic=berkeley_bjc/areas/concurrency.topic&amp;novideo=true&amp;noreading=true&amp;course=berkeley_bjc.html">
+                        <strong>Concurrency</strong>
+                    </a>
+                    <br />
+                    Watch a TA do the lab <a href="http://youtu.be/Z0VKC_LZWOA?hd=1">here</a>.
+                    <br />
+                    <strong>Reading Quiz (in-lab)</strong>
+                </td>
+                <td id="10" title="4">
+                    Data &amp;<br />
+                    Intro Midterm Data Performance Task <a href="https://docs.google.com/presentation/d/1RQfh2qShqgg5dcDXDWUu1wtMgqe_-mNH1YcHHHskS3Y/pub?start=false&amp;loop=false&amp;delayms=3000#slide=id.g10a0316c5_010">(Slides)</a><br />
+                    <br />
+                    <strong>Quest Regrade Due</strong>
+                </td>
+                <td class="due" id="10" title="4">
+                    <a href="https://docs.google.com/document/d/1giyUGQ26NccYLTevbSxhM1wQ6oBHLC2k2GesIKv_SC4/pub">Homework 3</a><br />
+                    <i>due Mon 10/07</i>
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    7
+                </td>
+                <td>
+                    10-07 to 10-11
+                </td>
+                <td id="10" title="6,7">
+                    <a class="reading required" href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter2.pdf">BtB Chapter 2</a><br />
+                    <a class="reading required" href="http://www.sfgate.com/cgi-bin/article.cgi?f=/c/a/2011/10/19/BU5K1LJ4R3.DTL">Data explosion creates revolution</a><br />
+                    <a class="reading required" href="http://webdocs.cs.ualberta.ca/~zaiane/courses/cmput690/notes/Chapter1/ch1.pdf">Data Mining</a><br />
+                    <a class="reading required" href="http://searchenginewatch.com/article/2289574/Big-Data-Big-Trouble-How-to-Avoid-5-Data-Analysis-Pitfalls">Data Pitfalls</a><br />
+                    <a class="reading optional" href="http://cacm.acm.org/magazines/2009/4/22953-computing-as-social-science/fulltext">Computing as Social Science</a><br />
+                    <a class="reading optional" href="http://datavisualization.ch/">Data Visualization</a><br />
+                    <a class="reading optional" href="http://www.cimt.plymouth.ac.uk/projects/mepres/stats/handlg_data_ch3.pdf">Basic Statistics (Helpful for Project)</a>
+                </td><!--Week 7-->
+                <td id="10" title="7">
+                    <strong>Guest TA Pierce Vollucci</strong><br />
+                    <a href="lec/09">Recursion I</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/17">Sp12 HD video with Qs</a>
+                </td>
+                <td id="10" title="7,8,9">
+                    <a href="http://inst.eecs.berkeley.edu/~cs10/labs/topic/topic.html?topic=berkeley_bjc/recur/recursion-trees-fractals.topic&amp;novideo=true&amp;noreading=true&amp;course=berkeley_bjc.html"><strong>Recursion I</strong></a><br />
+                    Watch a TA do the lab <a href="http://www.youtube.com/watch?v=8UIyqtDRFjU&list=PLAE5AE3CD22628741&index=10&feature=plpp_video">here</a>.
+                    <br />
+                    <strong>Reading Quiz (in-lab)</strong>
+                </td>
+                <td id="10" title="9">
+                    <a href="lec/10">Data (G)</a><br />
+                </td>
+                <td id="10" title="9,10,11">
+                    <strong>
+                        <a href="http://inst.eecs.berkeley.edu/~cs10/labs/topic/topic.html?topic=berkeley_bjc/areas/data.topic&amp;novideo=true&amp;noreading=true&amp;course=berkeley_bjc.html">Data</a>
+                    </strong>
+                    <br />
+                </td>
+                <td id="10" title="11">
+                    Algorithms &amp;<br />
+                    Concurrency<br />
+                    (<a target="_blank" href="disc/disc_7.pdf">Slides</a>)
+                </td>
+                <td class="due" id="10" title="11,12,13">
+                    <strong><a href="proj/BitsToInformationToKnowledge.pdf">Midterm Data Performance Task</a></strong><br />
+                    <br />
+                    <strong><i>Proposal<br />
+                    due Sun 10/13</i></strong><br />
+                    <a href="https://docs.google.com/a/berkeley.edu/forms/d/183x5YAGQrAvLIUsd1lyJAPEvVoJCPQt7z8Or6akOqnI/viewform">(Submit Proposal)</a>
+                    <br /> - <br />
+                    <a href="proj/ProjectProposalSample.pdf">(Example Proposal)</a>
+                    <br />
+                    Required Project Readings: <a href="http://datavisualization.ch/inside/how-we-visualized-meteorite-impacts/">Visualization 1</a><br />
+                    <a href="http://datavisualization.ch/inside/how-we-visualized-life-after-fukushima/">Visualization 2</a> <br />
+                    <a href="https://docs.google.com/document/d/1HXtsLfIPki620dQvyHkKcq4tSFfqWNgJb661V0TmUwo/pub">Useful Data Sites</a> <br />
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    8
+                </td>
+                <td>
+                    10-14 to 10-18
+                </td>
+                <td id="10" title="13,14">
+                    <a class="reading required" href="http://inst.eecs.berkeley.edu/%7Ecs10/sp12/readings/BtB4-pt1.pdf">BtB Chapter 4 Reading Segment 1</a><br />
+                    <a class="reading required" href="http://inst.eecs.berkeley.edu/%7Ecs10/sp12/readings/BtB4-pt2.pdf">BtB Chapter 4 Reading Segment 2</a><br />
+                    <a class="reading optional" href="http://cacm.acm.org/magazines/2011/10/131393-living-in-a-digital-world/pdf">Living in a Digital World</a><br />
+                    <a class="reading optional" href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter3.pdf">BtB Chapter 3</a>
+                </td><!--Week 8-->
+                <td id="10" title="14">
+                    <strong>Guest TA Jon McKinsey</strong><br />
+                    <a href="lec/11">Recursion II</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/19">Sp12 HD video with Qs</a>
+                </td>
+                <td id="10" title="14,15,16" class="project">
+                    Project Work<br />
+                    <strong>Reading Quiz (in-lab)</strong>
+                </td>
+                <td id="10" title="16">
+                    <a href="lec/12">Social Implications I (G)</a><br />
+                    <a target="_blank" href="http://youtu.be/v_tOSw-vhug">Fa11 SD video</a>
+                </td>
+                <td id="10" title="16,17,18">
+                    <strong>
+                        <a href="http://inst.eecs.berkeley.edu/~cs10/labs/topic/topic.html?topic=berkeley_bjc/recur/recursive-reporters.topic&novideo=true&noreading=true&course=berkeley_bjc.html">Recursion II</a>
+                    </strong>
+                    <br />
+                    Watch a TA do the lab <a href="http://youtu.be/ZtahpH0QyfE?hd=1">here</a>.
+                </td>
+                <td id="10" title="18">
+                    Recursion
+                </td>
+                <td class="due" id="10" title="18,19,20">
+                    <strong>
+                        <a href="proj/BitsToInformationToKnowledge.pdf">Midterm Data Performance Task</a>
+                        <br />
+                        Progress Report
+                    </strong>
+                    <br />
+                    <i>due 10/20</i>
+                    <br />
+                    <a href="https://docs.google.com/a/berkeley.edu/spreadsheet/viewform?usp=drive_web&formkey=dFFEZjBXa3liNWMtU2VSUklTX3hEU3c6MA#gid=0">(Submit Progress Report)</a>
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    9
+                </td>
+                <td>
+                    10-21 to 10-25
+                </td>
+                <td id="10" title="19,20">
+                    <a class="reading required" href="../sp12/readings/BtB5-pt1.pdf">BtB Chapter 5 Reading Segment 1</a><br />
+                    <a class="reading required" href="../sp12/readings/BtB5-pt2.pdf">BtB Chapter 5 Reading Segment 2</a><br />
+                    <a class="reading required" href="../sp12/readings/BtB5-pt3.pdf">BtB Chapter 5 Reading Segment 3</a><br />
+                    <a class="reading required" href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter6.pdf">BtB Chapter 6 (27-37)</a><br />
+                    <a class="reading required" href="../fa13/readings/Btb_Appendix.pdf">BtB Appendix</a>
+                </td><!--Week 9-->
+                <td id="10" title="21">
+                    <strong>Guest Lecturer Brian Harvey</strong>
+                    <br />
+                    <a href="lec/13/">Social Implications II</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/20">Sp12 HD video with Qs</a>
+                </td>
+                <td id="10" title="21,22,23">
+                    <a href="http://inst.eecs.berkeley.edu/~cs10/labs/topic/topic.html?topic=berkeley_bjc/recur/recursive-reporters.topic&novideo=true&noreading=true&course=berkeley_bjc.html">
+                        <strong>Recursion II<br />(continued)</strong>
+                    </a>
+                    <br />
+                    Watch a TA do the lab <a href="http://youtu.be/UPJHQehg46A?hd=1">here</a>.
+                    <strong>Reading Quiz (in-lab quiz)</strong>
+                </td>
+                <td id="10" title="23">
+                    <p>
+                        <strong>Guest Lecturer Brian Harvey</strong><br />
+                        <a href="lec/14">Social Implications III</a><br />
+                        <a target="_blank" href="https://coursesharing.org/courses/6/lectures/21">Sp12 HD video with Qs</a>
+                    </p>
+                </td>
+                <td class="project" id="10" title="23,24,25">
+                    Project Work / Optional With-Snap Midterm Review
+                </td>
+                <td id="10" title="25">
+                    Recursion II and Midterm Review
+                </td>
+                <td class="project" id="10" title="25">
+                    <strong>
+                        <a href="proj/BitsToInformationToKnowledge.pdf">Midterm Data Performance Task</a>
+                    </strong>
+                    <br />
+                    <i>due 10/25</i>
+                    <br />
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    10
+                </td>
+                <td>
+                    10-28 to 11-01
+                </td>
+                <td id="10" title="27">
+                    No Reading (MIDTERM)
+                    <br />
+                    <br />
+                    <strong>Midterm Review</strong>
+                    <br />
+                    Sun, 10/27 12-3PM, 2050 VLSB
+                </td><!--Week 10-->
+                <td id="10" title="28">
+                    <a href="lec/15/">Internet I (G)</a>
+                    <br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/27">Sp12 HD video with Qs</a>
+                </td>
+                <td class="exam" id="10" title="28,29,30">
+                    With-Snap! Midterm in lab
+                </td>
+                <td class="nested" id="10" title="30">
+                    <table border="0" class="inner" cellpadding="0" cellspacing="0">
+                        <tbody class="inner">
+                            <tr class="inner">
+                                <td class="dark inner">
+                                    <span class="inner"><a href="lec/16/">Internet II (G)</a></span>
+                                </td>
+                            </tr>
+                            <tr class="inner">
+                                <td class="exam inner">
+                                    <a href="exams/midterm/midterm_info.html">Midterm Exam</a>
+                                    <br />
+                                    10/30 7-9PM, 2050 VLSB
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td id="10" title="30,31">
+                    <strong>
+          <a href="http://inst.eecs.berkeley.edu/~cs10/labs/topic/topic.html?topic=berkeley_bjc/areas/internet.topic&amp;novideo=true&amp;noreading=true&amp;course=berkeley_bjc.html">Internet</a>
+        </strong>
+                </td>
+                <td id="11" title="1">
+                    The Impact Performance Task Introduction
+          (<a href="https://docs.google.com/presentation/d/1cOrP1HoM2V_IQ6VHoc91x4TNY2cALAMyz3-e125sLHw/pub?start=false&loop=false&delayms=3000">Slides</a>)
+                </td>
+                <td id="11" title="2">
+                    None
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    11
+                </td>
+                <td>
+                    11-04 to 11-08
+                </td>
+                <td id="11" title="2,3">
+                    <a class="reading required" href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter7.pdf">BtB Chapter 7</a><br />
+                    <a class="reading optional" href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter8.pdf">BtB Chapter 8</a>
+                </td><!--Week 11-->
+                <td id="11" title="4">
+                    <a href="lec/17">Lambda + HOFs I (D)</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/24">Sp12 HD video with Qs</a>
+                </td>
+                <td id="11" title="4,5,6">
+                    <strong><a href="http://inst.eecs.berkeley.edu/~cs10/labs/topic/topic.html?topic=berkeley_bjc/hofs/hofs-practice.topic&course=berkeley_bjc.html">Lambda + HOFs I</a></strong>
+                    <br />
+                    <!-- Watch a TA do the lab <a href="http://youtu.be/sAZeF8QOqsU?hd=1">here</a>. -->
+                    <br />
+                    <strong>Reading Quiz (in-lab quiz)</strong>
+                </td>
+                <td id="11" title="6">
+                    <a href="lec/18/">Distributed Computing (G)</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/25">Sp12 HD video with Qs</a>
+                </td>
+                <td id="11" title="3">
+      <strong><a href="http://inst.eecs.berkeley.edu/~cs10/labs/topic/topic.html?topic=berkeley_bjc/areas/distributed-computing.topic&novideo=true&noreading=true&course=berkeley_bjc.html">Distributed Computing</a></strong><br />
+                    <!-- Watch a TA do the lab <a href="http://youtu.be/vzINbAxzTCI?hd=1">here</a>. -->
+                </td>
+                <td id="11" title="5">
+      Social Implications of Computing
+                    (<a href="https://docs.google.com/a/berkeley.edu/presentation/d/1GnuAHhuwvcigbbcWz3EGYsLq-wQ2n1kiPsbM3E3PXo4/edit?usp=sharing">Slides</a>)
+                </td>
+                <td id="11" title="6">
+                    None
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    12
+                </td>
+                <td>
+                    11-11 to 11-15
+                </td>
+                <td id="11" title="11,12">
+                    <!--
+                  <a class="required" href="http://cacm.acm.org/magazines/2010/4/81493-a-view-of-cloud-computing/fulltext"></a>
+                  <a href="http://www.youtube.com/watch?v=hjrdThuwpZ0">
+                  What is Cloud Computing? (Video)</a> <br />
+                  <a href="http://cacm.acm.org/magazines/2010/4/81493-a-view-of-cloud-computing/fulltext">
+                  <i>A Berkeley View of Cloud Computing</i>
+                </a>
+                -->
+                    <a class="reading required" href="http://www.hulu.com/watch/23347/nova-the-great-robot-race">The Great Robot Race (Video)</a><br />
+                </td><!--Week 12-->
+                <td class="noClass" id="11" title="11">
+                    No Lecture, Veteran's Day
+                </td>
+                <td class="project" id="11" title="12,13">
+                    <strong>Impact Performance Task Work</strong><br />
+                    <!-- Watch a TA do the lab <a href="http://youtu.be/LiOupAf4ef0?hd=1">here</a>. -->
+                </td>
+                <td id="11" title="13">
+                    <a href="lec/19">Lambda + HOFs II (D)</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/26">Sp12 HD video with Qs</a>
+                </td>
+                <td id="11" title="13,14,15">
+      <a href="http://peterasujan.github.io/bjc-r/topic/topic.html?topic=berkeley_bjc/hofs-with-recursion/hofs-with-recursion.topic&course=berkeley_bjc.html"><strong>Lambda and HOFs II</strong></a><br />
+                    <!-- Watch a TA do the lab <a href="http://youtu.be/JQ5G-8nW05w">here</a>. -->
+                    <br />
+                    <strong>Reading Quiz (in-lab quiz)</strong>
+                </td>
+                <td id="11" title="15">
+      Lambda + HOFs
+                </td>
+                <td class="paper" id="11" title="16">
+                    <a href="blog/CS Principles Performance Assessment 2013-10-1.pdf"><strong>Impact Performance Task</strong></a>
+                    <br />
+                    <i>due 11/15</i>
+      <br />
+                    <a href="https://docs.google.com/presentation/d/1-MhNWsE3tNFf6UmdRkcG4IeC8KgkZ6i2YdkvIBrPvZw/pub?start=false&loop=false&delayms=3000">Artifact Examples</a>
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    13
+                </td>
+                <td>
+                    11-18 to 11-22
+                </td>
+                <td id="11" title="17">
+                    <a class="reading required" href="http://www.nytimes.com/2010/06/20/magazine/20Computer-t.html">What is IBM's Watson?</a><br />
+                    <a class="reading required" href="http://www.scientificamerican.com/article.cfm?id=computers-solve-checkers-its-a-draw">Computers Solve Checkers - It's a Draw</a><br />
+                    <a class="reading required" href="http://inst.eecs.berkeley.edu/%7Ecs10/fa10/lec/21/ai.txt">Brian Harvey's AI notes</a><br />
+                    <a class="reading optional" href="http://www.nytimes.com/2010/08/09/opinion/09lanier.html">The First Church of Robotics</a><br />
+                    <a class="reading optional" href="http://www.youtube.com/watch?v=4gzpd0irP58">The Thinking Machine (Video)</a>
+                </td><!--Week 13-->
+                <td id="11" title="18">
+                    <strong>Guest Lecturer Anna Rafferty</strong>
+                    <br />
+                    <a href="lec/20">Artificial Intelligence</a>
+                    <br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/22">Sp12 HD video with Qs</a>
+                </td>
+                <td class="project" id="11" title="18,19,20">
+                    Project Work Lab<br />
+                    <br />
+                    <strong>Reading Quiz (in-lab quiz)</strong>
+                </td>
+                <td id="11" title="20">
+                    <strong>Guest Lecturer Bjoern Hartmann</strong><br />
+                    <a href="lec/21">HCI</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/28">Sp12 HD video with Qs</a>
+                </td>
+                <td id="11" title="20,21,22">
+                    <a href="http://peterasujan.github.io/bjc-r/topic/topic.html?topic=berkeley_bjc/robots/robots.topic&course=berkeley_bjc.html">Finch Robot Lab</a>
+                </td>
+                <td id="11" title="22">
+                    CS @ Cal, and Beyond
+                </td>
+                <td class="paper" id="11" title="22">
+                    <strong>Impact Performance Task Comments</strong>
+                    <br />
+                    <i>due 11/22</i>
+                    <br />
+                    <a href="https://docs.google.com/a/berkeley.edu/forms/d/1si3sND_XwTxD_godxzGCg8htXHjtaLPEMhDVLfRyeoM/viewform">Final Proposal Form</a><br />
+                    <i>due 11/22</i>
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    14
+                </td>
+                <td>
+                    11-25 to 11-29
+                </td>
+                <td id="11" title="23,24">
+                    <a class="reading required" href="http://www.wired.com/thisdayintech/tag/turing-machine/">Computer Pioneer Alan Turing</a><br />
+                    <a class="reading required" href="http://www.scientificamerican.com/article.cfm?id=what-makes-a-quantum-comp">Why is Quantum Different?</a><br />
+                    <a class="reading required" href="http://money.cnn.com/2006/07/26/magazines/fortune/futureoftech_quantum.fortune/index.htm">Quantum Leap</a><br />
+                    <a class="reading required" href="http://www.bbc.co.uk/news/magazine-16536598">Twenty TopPredictions for life 100 years from now</a><br />
+                    <a class="reading optional" href="http://introcs.cs.princeton.edu/java/76computability/halting-poem.html">Halting Problem Poem</a>
+                </td><!-- Week 14-->
+                <td id="11" title="25">
+                    <strong>Guest Lecturer Prof Kathy Yelick</strong>
+                    <br />
+                    <a href="lec/22">Saving the World with Computing (CS + X)</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/29">Sp12 HD video with Qs</a>
+                </td>
+                <td class="project" title="25,26,27">
+                    Project Work<br />
+                    <br />
+                    <strong>Reading Quiz (in-lab quiz)</strong>
+                </td>
+                <td class="due" id="11" title="27">
+                    <a href="lec/23">Limits of Computing (D)</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/30">Sp12 HD video with Qs</a>
+                    <br />
+                    <strong>Final Project Progress Reports Due</strong>
+                    <br />
+                    (See far right column)
+                </td>
+                <td class="noClass" colspan="2">
+                    No Lab or Discussion, Thanksgiving
+                </td>
+                <td class="due" id="11" title="27">
+                    <br />
+                    <strong>Final Project Progress Reports</strong>
+                    <br />
+                    (due 11/27)
+                    <ul>
+                        <li>Group Report</li>
+                        <li>Individual Report</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    15
+                </td>
+                <td>
+                    12-02 to 12-06
+                </td>
+                <td id="12" title="1,2">
+                    <a class="reading hard" href="http://radar.oreilly.com/2012/08/dna-storage.html">DNA Storage</a><br />
+                    <a class="reading optional" href="http://www.youtube.com/watch?v=hb4AzF6wEoc">Apple's 1987 Knowledge Navigator (Video)</a><br />
+                    <a class="reading optional" href="http://youtu.be/bwj2s_5e12U">Microsoft's view of productivity in 2019 (Video)</a><br />
+                    <a class="reading optional" href="http://www.youtube.com/watch?v=tnRJaHZH9lo">The Future of Augmented Reality</a><br />
+                    <a class="reading optional" href="http://youtu.be/5pg6fho-xb4">Apple's Siri</a><br />
+                    <a class="reading optional" href="http://www.bitsbook.com/wp-content/uploads/2008/12/chapter9.pdf">BtB: Conclusion</a>
+                </td><!--Week 15-->
+                <td id="12" title="2">
+                    <a href="lec/24">Future of Computing (G)</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/31">Sp12 HD video with Qs</a>
+                </td>
+                <td class="project" id="12" title="2,3,4">
+                    Project Work
+                    <br />
+                    <br />
+                    <strong>Reading Quiz (in-lab quiz)</strong>
+                </td>
+                <td id="12" title="4">
+                    <a href="lec/25">Summary and Farewell (DG)</a><br />
+                    <a target="_blank" href="https://coursesharing.org/courses/6/lectures/32">Sp12 HD video with Qs</a>
+                </td>
+                <td class="exam" id="12" title="4,5,6">
+                    <strong>With-Snap! Final Exam in Lab</strong>
+                </td>
+                <td id="12" title="6">
+                    Final Thoughts
+                </td>
+                <td class="project" id="12" title="6">
+                    <strong>
+                        <a href="proj/final.html">Final Project Spec</a>
+                    </strong>
+                    <br />
+                    <i>due 12/06</i>
+                    <br />
+                    <!-- (<a href="https://docs.google.com/document/d/1VOLIvFKrD8MPIg3TJp35i2Efoq1HK4nwOu3hgLVWZ1k/edit?hl=en_US">BYOB Project tips</a>) -->
+                </td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    16
+                </td>
+                <td>
+                    12-09 to 12-13
+                </td>
+                <td id="12" title="7,8"></td>
+                <td class="noClass" id="12" title="9">
+                    RRR Week
+                </td>
+                <td class="noClass" id="12" title="10">
+                    CS Ed Day
+                </td>
+                <td class="noClass" id="12" title="11">
+                    RRR Week
+                </td>
+                <td class="noClass" id="12" title="12">
+                    RRR Week
+                </td>
+                <td class="noClass" id="12" title="13">
+                    RRR Week
+                </td>
+                <td id="12" title="14"></td>
+            </tr>
+            <tr class="cal">
+                <td>
+                    17
+                </td>
+                <td>
+                    12-16 to 12-20
+                </td>
+                <td id="12" title="15">
+                    <strong>Final Exam Review</strong><br />
+                    Sun, 12/15 12-3PM, 2050 VLSB
+                </td>
+                <td></td>
+                <td></td>
+                <td class="exam" id="12" title="18">
+                    <a href="exams/final/final_info.html">Paper Final Exam</a><br />
+                    <strong>Wed 12/18 7-10pm</strong><br />
+                    Location TBD<br />
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table><!--end of calendar code-->
+  </body>

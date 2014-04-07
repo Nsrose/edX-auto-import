@@ -1,0 +1,12 @@
+<problem markdown="In this comparison, which computer part is analogous to the eyes?&#10;&#10;[[Motherboard, CPU/Processor, RAM, (Video Card), Power Supply, Hard Disk, Optical Drive]]&#10;&#10;[explanation]&#10;The Video Card is like the eye of the machine because it handles all visual information.&#10;[explanation]&#10;" display_name="Question" showanswer="finished">
+  <p>In this comparison, which computer part is analogous to the eyes?</p>
+  <optionresponse>
+    <optioninput options="('Motherboard','CPU/Processor','RAM','Video Card','Power Supply','Hard Disk','Optical Drive')" correct="Video Card"/>
+  </optionresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The Video Card is like the eye of the machine because it handles all visual information.</p>
+    </div>
+  </solution>
+</problem>

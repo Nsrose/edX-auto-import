@@ -1,0 +1,11 @@
+<problem markdown="Which of the statements below is true about IPv6?&#10;     ( ) IPv6 is the 6th version of &quot;Intellectual Property.&quot;&#10;     ( ) IPv6 is significantly faster than IPv4.&#10;     ( ) IPv6 addresses contain 32 bits.&#10;     (x) IPv6 was created from a lack of IPv4 addresses." display_name="Multiple Choice">
+  <p>Which of the statements below is true about IPv6?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">IPv6 is the 6th version of "Intellectual Property."</choice>
+      <choice correct="false">IPv6 is significantly faster than IPv4.</choice>
+      <choice correct="false">IPv6 addresses contain 32 bits.</choice>
+      <choice correct="true">IPv6 was created from a lack of IPv4 addresses.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

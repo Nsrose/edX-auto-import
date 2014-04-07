@@ -1,0 +1,19 @@
+<problem markdown="null" display_name="Quiz 19.1" showanswer="finished">
+  <p>Let's consider another example using HOF's. Assume we are trying to find the largest odd number in a list of random positive numbers. What are the possible orders we could use HOF's? (Assume that we are soving this problem only using HOF's.):</p>
+  <choiceresponse>
+    <checkboxgroup direction="vertical">
+      <choice correct="true">keep -&gt; combine</choice>
+      <choice correct="true">map -&gt; combine</choice>
+      <choice correct="true">map -&gt; keep -&gt; combine</choice>
+      <choice correct="false">map -&gt; keep</choice>
+    </checkboxgroup>
+  </choiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p><b>Keep -&gt; Combine:</b> We could keep all the odd numbers and then combine all the kept numbers with the 'greater than' operator to reduce then to a single maximum number.</p>
+      <p><b>Map -&gt; Combine:</b> We could map 0 to all the even numbers in the list, since this list is a list of positivie numbers only and the smallest possible odd number is 1. Then we would reduce the list to a single maximum number using combine with the 'greater than' operator.</p>
+      <p><b>Map -&gt; Keep -&gt; Combine:</b> We could map 0 to all the even numbers in the list, since this list is a list of positivie numbers only and the smallest possible odd number is 1. Then we could keep the non-zero numbers. Then we would reduce the list to a single maximum number using combine with the 'greater than' operator.</p>
+    </div>
+  </solution>
+</problem>

@@ -1,0 +1,11 @@
+<problem markdown="Which of the following are often found as jobs on Mechanical Turk for humans to perform? Check all that apply.&#10;     [x] Image labeling&#10;     [x] Spam detection&#10;     [x] Reading human handwriting&#10;     [x] Business listing verification" display_name="Multiple Choice">
+  <p>Which of the following are often found as jobs on Mechanical Turk for humans to perform? Check all that apply.</p>
+  <choiceresponse>
+    <checkboxgroup direction="vertical">
+      <choice correct="true">Image labeling</choice>
+      <choice correct="true">Spam detection</choice>
+      <choice correct="true">Reading human handwriting</choice>
+      <choice correct="true">Business listing verification</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

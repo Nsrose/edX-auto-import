@@ -1,0 +1,12 @@
+<problem markdown="In this comparison, which computer part is analogous to the heart?&#10;&#10;[[(Motherboard), CPU/Processor, RAM, Video Card, Power Supply, Hard Disk, Optical Drive]]&#10;&#10;[explanation]&#10;The Motherboard is like the heart of the machine because everything connects to it in some way.&#10;[explanation]&#10;" display_name="Question" showanswer="finished">
+  <p>In this comparison, which computer part is analogous to the heart?</p>
+  <optionresponse>
+    <optioninput options="('Motherboard','CPU/Processor','RAM','Video Card','Power Supply','Hard Disk','Optical Drive')" correct="Motherboard"/>
+  </optionresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The Motherboard is like the heart of the machine because everything connects to it in some way.</p>
+    </div>
+  </solution>
+</problem>

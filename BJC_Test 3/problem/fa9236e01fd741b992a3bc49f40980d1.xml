@@ -1,0 +1,13 @@
+<problem markdown="TRIVIA QUESTION&#10;&#10;Watson was the natural outgrowth of the success of Deep Blue in the realm of chess. But this time the realm was the TV trivia game show &quot;Jeopardy!&quot;. Which &quot;Jeopardy!&quot; champion's string of 74 wins inspired IBM executives to seek to develop a computer program that could beat him, a feat Watson accomplished in 2011?&#10;&#10;= Ken Jennings&#10;&#10;&#10;[explanation]&#10;Ken Jennings. In 2004, IBM Research manager Charles Lickel caught a glimpse of Jennings on TV during his famous run and decided that IBM should develop a computer that could beat him. At first no one wanted to take on the task until finally David Ferrucci stepped up to the challenge. The biggest problem facing the team was to get Watson to understand questions that were asked in common language in a relatively short amount of time and then to be able to answer those questions. By 2011, Watson was regularly beating &quot;Jeopardy!&quot; champions. That year Watson faced off against Ken Jennings and Brad Rutter, the two biggest winners on &quot;Jeopardy!&quot;. Watson won the three game cumulative match handily. &#10;[explanation]&#10;" display_name="Quiz 20.4" showanswer="answered">
+  <p>TRIVIA QUESTION</p>
+  <p>Watson was the natural outgrowth of the success of Deep Blue in the realm of chess. But this time the realm was the TV trivia game show "Jeopardy!". Which "Jeopardy!" champion's string of 74 wins inspired IBM executives to seek to develop a computer program that could beat him, a feat Watson accomplished in 2011?</p>
+  <stringresponse answer="Ken Jennings" type="ci">
+    <textline size="20"/>
+  </stringresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Ken Jennings. In 2004, IBM Research manager Charles Lickel caught a glimpse of Jennings on TV during his famous run and decided that IBM should develop a computer that could beat him. At first no one wanted to take on the task until finally David Ferrucci stepped up to the challenge. The biggest problem facing the team was to get Watson to understand questions that were asked in common language in a relatively short amount of time and then to be able to answer those questions. By 2011, Watson was regularly beating "Jeopardy!" champions. That year Watson faced off against Ken Jennings and Brad Rutter, the two biggest winners on "Jeopardy!". Watson won the three game cumulative match handily. </p>
+    </div>
+  </solution>
+</problem>

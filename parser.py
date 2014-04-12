@@ -17,51 +17,87 @@ def move_files(filename, src_folder):
 os.system("clear")
 print("#############################")
 print("Lab Parser")
-print("Version 1.0")
+print("Version 1.5")
 print("#############################")
 print("\n")
 print("Instructions:")
-print("1) Make sure current directory contains bjc-r, edX course folder, and .topic lab to parse.")
+print("1) Make sure current directory contains bjc-r and edX course folder from export.")
 print("2) Add the sequential filename to the appropriate place in course/chapter folder BEFORE parsing.")
 print("\n")
-print("Current directory contains:")
-print("\n")
 
-files = [f for f in os.listdir('.')]
-if "bjc-r" not in files:
-	print("---bjc-r folder not found in current directory. Parsing cancelled.")
-	sys.exit()
-for f in files:
-	print(f)
-print("\n")
-print("Enter each lab you want to parse.")
-print("'q' ---finish")
-print("'.' ---add all labs in current folder")
-print("\n")
 
+
+
+### navigation to folder ###
+done0 = False
 labs = []
-done = False
-while not done:
-	lab_source = input("Lab file name, including .topic: ")
-	if lab_source.lower() == 'q':
+while not done0:
+	print("\n")
+	print("Type a folder to browse topic files to parse.")
+	print("'w' ---finish adding labs")
+	print("\n")
+	files = [f for f in os.listdir('.')]
+	if "bjc-r" not in files:
+		print("---bjc-r folder not found in current directory. Parsing cancelled.")
+		sys.exit()
+	for folder in os.listdir('bjc-r/topic/berkeley_bjc'):
+		print(folder)
+	print("\n")
+	folder = input("Enter folder name to navigate: ")
+	if folder.lower() == 'w':
+		done0 = True 
 		print("---All labs ready for parsing: " + str(labs))
-		done = True
-	elif lab_source == '.':
-		for f in files:
-			if ".topic" in f:
-				labs.append(f)
-		print("---Staged all labs in current directory: " + str(labs))
-		done = True
-	elif ".topic" not in lab_source:
-		print("---Must parse .topic file only.")
 	else:
 		try:
-			dummy = open(lab_source, 'r').read()
-			labs.append(lab_source)
-			print("---Added.")
+			folder = 'bjc-r/topic/berkeley_bjc/' + folder 
+			files = [f for f in os.listdir(folder)]
+			
+			### choosing labs to parse ###
+			print("\n")
+			print("Enter each lab you want to parse.")
+			print("'q' ---finish")
+			print("'.' ---add all labs in current folder")
+			print("'b' ---go back")
+			print("\n")
+			for f in files:
+				print(f)
+			print("\n")
+			done = False
+			while not done:
+				lab_source = input("Lab file name, including .topic: ")
+				if lab_source.lower() == 'q':
+					print("---All labs ready for parsing: " + str(labs))
+					done = True
+				elif lab_source == '.':
+					for f in files:
+						if ".topic" in f:
+							labs.append(folder + "/" + f)
+					print("---Staged all labs in current directory: " + str(labs))
+					done = True
+				elif lab_source.lower() == 'b':
+					done = True 
+				elif ".topic" not in lab_source:
+					print("---Must parse .topic file only.")
+				else:
+					try:
+						dummy = open(folder + "/" + lab_source, 'r').read()
+						labs.append(folder + "/" + lab_source)
+						print("---Added.")
+					except:
+						print("---Invalid input.")
 		except:
-			print("---Invalid input.")
+			print("No such folder exists.")
 
+
+
+
+
+
+
+
+
+
+### Course folder selection ###
 print("\n")
 done1 = False
 while not done1:
@@ -76,13 +112,18 @@ print("\n")
 ### execution ###
 
 for lab in labs:
-	print("Adding lab " + lab[:-6] + "...")
-	parse(lab)
-	move_files(lab, course_folder)
+	psuedo_topic = lab.rsplit('/', 1)[1]
+	print("Adding lab " + psuedo_topic + "...")
+	touch(psuedo_topic)
+	shutil.copy(lab, psuedo_topic)
+
+	parse(psuedo_topic)
+	move_files(psuedo_topic, course_folder)
 	shutil.rmtree('vertical')
 	shutil.rmtree('html')
-	os.remove(lab[:-6] + ".xml")
-	print("Parsed lab " + lab[:-6] + '.')
+	os.remove(psuedo_topic[:-6] + ".xml")
+	os.remove(psuedo_topic)
+	print("Parsed lab " + psuedo_topic + '.')
 	print("\n")
 
 print("Creating new .tar.gz file for import...")

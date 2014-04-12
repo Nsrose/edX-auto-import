@@ -243,6 +243,12 @@ def make_overview(filename):
 	target_new.write("\n")
 	target_new.write("</vertical>")
 
+def get_quote(name):
+	"""Takes in a name with/without quotes, and returns either ' or ", depending."""
+	if '"' in name:
+		return "'"
+	return '"'
+
 def make_vertical(name, line):
 	"""makes a vertical file in the vertical folder"""
 	touch("vertical/" + name + ".xml")
@@ -252,13 +258,15 @@ def make_vertical(name, line):
 	absolute_path = path_content[2:-1]
 	html_name = absolute_path.rsplit('/', 1)[1][:-5]
 
-	target.write("<vertical display_name='" + title + "'>")
+	quote = get_quote(title)
+	target.write("<vertical display_name=" + quote + title + quote + ">")
 	target.write("\n")
 	target.write('	<html url_name="' + html_name + '"/>')
 	target.write("\n")
 	target.write("</vertical>")
 
 def make_sequential(filename):
+	"""Makes the sequential file. Must add to correct chapter manually."""
 	content = open(filename, 'r')
 	lines = content.readlines()
 	lines = [x for x in [s.strip() for s in lines] if not x == '']

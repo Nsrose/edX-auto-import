@@ -116,7 +116,6 @@ for lab in labs:
 	print("Adding lab " + psuedo_topic + "...")
 	touch(psuedo_topic)
 	shutil.copy(lab, psuedo_topic)
-
 	parse(psuedo_topic)
 	move_files(psuedo_topic, course_folder)
 	shutil.rmtree('vertical')

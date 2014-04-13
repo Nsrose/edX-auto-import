@@ -3,7 +3,7 @@ edX-auto-import
 
 Import Testing for BJC edX Course dev
 
-Lab Parser v 1.0
+Lab Parser v 1.5
 
 Parses labs from bjc-r into an entirely new course file ready for edX import 
 

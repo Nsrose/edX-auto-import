@@ -27,7 +27,6 @@ print("\n")
 
 
 
-
 ### navigation to folder ###
 done0 = False
 labs = []
@@ -87,13 +86,6 @@ while not done0:
 						print("---Invalid input.")
 		except:
 			print("No such folder exists.")
-
-
-
-
-
-
-
 
 
 

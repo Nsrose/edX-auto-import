@@ -15,7 +15,7 @@ Parsing:
 
 ---------------
 
-1) Make sure parser.py, tar_file.py, new_lab_parser.py, the course folder, bjc-r, and the .topic lab(s) you want to parse all are in your current directory.
+1) Make sure parser.py, tar_file.py, new_lab_parser.py, the course folder from export, and bjc-r are in all in your current directory. 
 
 ---If lab doesn't already exist in course:
 2) Add the name of the lab (without the .topic) as a sequential filename to the correct chapter in the course folder. 
@@ -32,7 +32,7 @@ Removing:
 
 ---------------
 
-1) Make sure current directory contains parser.py, tar_file.py, new_lab_parser.py, course folder, bjc-r, the .topic labs to remove, and remover.py.
+1) Make sure parser.py, tar_file.py, new_lab_parser.py, the course folder from export, and bjc-r are in all in your current directory. 
 
 2) You can remove the name of the lab from the correct chapter in the course folder if you want to for ease of reading, but this isn't a necessary step. 
 

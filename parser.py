@@ -34,6 +34,7 @@ while not done0:
 	print("\n")
 	print("Type a folder to browse topic files to parse.")
 	print("'w' ---finish adding labs")
+	print("'s' ---show currently staged labs")
 	print("\n")
 	files = [f for f in os.listdir('.')]
 	if "bjc-r" not in files:
@@ -46,6 +47,8 @@ while not done0:
 	if folder.lower() == 'w':
 		done0 = True 
 		print("---All labs ready for parsing: " + str(labs))
+	elif folder.lower() == 's':
+		print("Currently staged labs: " + str(labs))
 	else:
 		try:
 			folder = 'bjc-r/topic/berkeley_bjc/' + folder 
@@ -54,8 +57,9 @@ while not done0:
 			### choosing labs to parse ###
 			print("\n")
 			print("Enter each lab you want to parse.")
-			print("'q' ---finish")
+			print("'q' ---finish adding labs in this folder")
 			print("'.' ---add all labs in current folder")
+			print("'s' ---show currently staged labs")
 			print("'b' ---go back")
 			print("\n")
 			for f in files:
@@ -75,6 +79,8 @@ while not done0:
 					done = True
 				elif lab_source.lower() == 'b':
 					done = True 
+				elif lab_source.lower() == 's':
+					print("Currently staged labs: " + str(labs))
 				elif ".topic" not in lab_source:
 					print("---Must parse .topic file only.")
 				else:

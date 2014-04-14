@@ -44,6 +44,7 @@ while not done0:
 	print("\n")
 	print("Type a folder to browse topic files to remove.")
 	print("'w' ---finish staging labs")
+	print("'s' ---show currently staged labs")
 	print("\n")
 	files = [f for f in os.listdir('.')]
 	if "bjc-r" not in files:
@@ -56,6 +57,8 @@ while not done0:
 	if folder.lower() == 'w':
 		done0 = True 
 		print("---All labs ready for removal: " + str(labs))
+	elif folder.lower() == 's':
+		print("Currently staged labs: " + str(labs))
 	else:
 		try:
 			folder = 'bjc-r/topic/berkeley_bjc/' + folder 
@@ -85,6 +88,8 @@ while not done0:
 					done = True
 				elif lab_source.lower() == 'b':
 					done = True 
+				elif lab_source.lower() == 's':
+					print("Currently staged labs: " + str(labs))
 				elif ".topic" not in lab_source:
 					print("---Must remove .topic file only.")
 				else:

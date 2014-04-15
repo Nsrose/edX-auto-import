@@ -1,0 +1,5 @@
+<course course_image="bjc2.png" display_name="Besides Blocks: Python" end="2014-05-16T00:00:00Z" enrollment_end="2014-05-15T07:00:00Z" enrollment_start="2014-01-01T08:00:00Z" graceperiod="" info_sidebar_name="Resources" pdf_textbooks="[{&quot;tab_title&quot;: &quot;Besides Blocks&quot;, &quot;id&quot;: &quot;6Besides_Blocks&quot;, &quot;chapters&quot;: [{&quot;url&quot;: &quot;/c4x/BerkeleyX/CS_10/asset/blowntobits.pdf&quot;, &quot;title&quot;: &quot;Textbook&quot;}]}, {&quot;tab_title&quot;: &quot;Besides Blocks&quot;, &quot;id&quot;: &quot;1Besides_Blocks&quot;, &quot;chapters&quot;: [{&quot;url&quot;: &quot;/c4x/BerkeleyX/CS_10/asset/blowntobits.pdf&quot;, &quot;title&quot;: &quot;Textbook&quot;}]}]" start="2014-04-14T19:00:00Z">
+  <chapter url_name="c29f0cd721ff448891d874dccb952e81"/>
+  <chapter url_name="4df9e2957e8944008fd8feb9c4a777f2"/>
+  <wiki slug="BerkeleyX.CS_10.Spring_2014"/>
+</course>

@@ -1,0 +1,1 @@
+{"GRADE_CUTOFFS": {"Pass": 0.5}, "GRADER": [{"short_label": "BB1", "min_count": 1, "type": "Besides Blocks I", "drop_count": 0, "weight": 0.5}, {"short_label": "BB2", "min_count": 1, "type": "Besides Blocks II", "drop_count": 0, "weight": 0.5}]}

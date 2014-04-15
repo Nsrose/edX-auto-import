@@ -127,6 +127,8 @@ def fix_links(lines):
 						modded_element = 'href=' + '"http://inst.eecs.berkeley.edu/~cs10/labs/' + relevant.replace("../", "")
 					elif '/bjc-r' in relevant:
 						modded_element = 'href=' + '"http://bjc.berkeley.edu' + relevant
+					elif '#' in relevant:
+						modded_element = 'href=' + relevant
 					else:
 						modded_element = 'href=' + '"http://bjc.berkeley.edu/' + relevant
 					el[index] = modded_element
@@ -151,6 +153,8 @@ def fix_links(lines):
 						modded_element = 'src=' + '"http://inst.eecs.berkeley.edu/~cs10/labs/' + relevant.replace("../", "")
 					elif '/bjc-r' in relevant:
 						modded_element = 'src=' + '"http://bjc.berkeley.edu' + relevant
+					elif '#' in relevant:
+						modded_element = 'src=' + relevant
 					else:
 						modded_element = 'src=' + '"http://bjc.berkeley.edu/' + relevant
 					el[index] = modded_element

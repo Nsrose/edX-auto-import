@@ -164,6 +164,15 @@ def fix_links(lines):
 			result.append(line)
 	return result 
 
+def insert_snap(lines):
+	"""Inserts snap iframe to top of html page"""
+	index = lines.index('<head>') + 1
+	iframe = open("snap-frame.html", 'r')
+	ilines = iframe.read()
+	lines.insert(index, ilines)
+	return lines 
+
+
 def make_html(line):
 	"""Makes an html and corresponding xml file from a line--
 	must already have created html folder"""
@@ -184,6 +193,7 @@ def make_html(line):
 		lines = [x for x in [s.strip() for s in lines] if not x == '']
 		lines = insert_title(title, lines)
 		lines = fix_links(lines)
+		lines = insert_snap(lines)
 		new_file = open(destination, 'w') 
 		new_content = (' ').join(lines)
 		new_file.write(new_content)

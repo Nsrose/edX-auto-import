@@ -1,75 +1,42 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <script type="text/javascript" src="/bjc-r/admin/bjc-loader.js"></script>
-        <title>
-            Self Test: Detecting a Key Press
-        </title>
-    </head>
-	<body>
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml"> <head> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
 
-		<!-- question 1 -->
-		<div class="assessment-data"
-		type="multiplechoice" identifier="triange-turning"
-		hasinlinefeedback="true" maxchoices="5"
-		responseIdentifier="resp1" shuffle="false" >
-			<div class="prompt">
-				<p>
-					Which versions shown below provide the same functionality as the Original script, in which the character will say Up Arrow Pressed for two seconds every time the up arrow key is pressed?
-				</p>
-				<img src="/bjc-r/img/prog/WhenArrowPressedWide.gif"/>
-				<p>
-					Choose at least one answer:
-				</p>	
-			</div>
-			<div class="choice" identifier="c1">
-				<div class="text">
-					Version 2
-				</div>
-				<div class="feedback">
-					Correct!
-				</div>
-			</div>
-			<div class="choice" identifier="c2">
-				<div class="text">
-					Version 3
-				</div>
-				<div class="feedback">
-					Would this say "Up Arrow Pressed" after the first time? Think about when the script stops.
-				</div>
-			</div>
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
 
-			<div class="choice" identifier="c3">
-				<div class="text">
-					Version 4
-				</div>
-				<div class="feedback">
-					Does this script stop saying "Up Arrow Pressed"?
-				</div>
-			</div>
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
 
-			<div class="choice" identifier="c4">
-				<div class="text">
-					Version 5
-				</div>
-				<div class="feedback">
-					Does this script say "Up Arrow Pressed" when the user presses the up arrow?
-				</div>
-			</div>
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
 
-			<div class="choice" identifier="c5">
-				<div class="text">
-					Version 6
-				</div>
-				<div class="feedback">
-					Would this say "Up Arrow Pressed" after the first time? Think about when the script stops.
-				</div>
-			</div>
-
-			<div class="responseDeclaration" identifier="resp1">
-				<div class="correctResponse" identifier="c1"></div>
-			</div>
-		</div>
-	</body>
-</html>
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title> Self Test: Detecting a Key Press </title> </head> <body> <h1>Test Yourself: Detecting a key press</h1> <!-- question 1 --> <div class="assessment-data" type="multiplechoice" identifier="triange-turning" hasinlinefeedback="true" maxchoices="5" responseIdentifier="resp1" shuffle="false" > <div class="prompt"> <p> Which versions shown below provide the same functionality as the Original script, in which the character will say Up Arrow Pressed for two seconds every time the up arrow key is pressed? </p> <img src="http://bjc.berkeley.edu/bjc-r/img/prog/WhenArrowPressedWide.gif"/> <p> Choose at least one answer: </p> </div> <div class="choice" identifier="c1"> <div class="text"> Version 2 </div> <div class="feedback"> Correct! </div> </div> <div class="choice" identifier="c2"> <div class="text"> Version 3 </div> <div class="feedback"> Would this say "Up Arrow Pressed" after the first time? Think about when the script stops. </div> </div> <div class="choice" identifier="c3"> <div class="text"> Version 4 </div> <div class="feedback"> Does this script stop saying "Up Arrow Pressed"? </div> </div> <div class="choice" identifier="c4"> <div class="text"> Version 5 </div> <div class="feedback"> Does this script say "Up Arrow Pressed" when the user presses the up arrow? </div> </div> <div class="choice" identifier="c5"> <div class="text"> Version 6 </div> <div class="feedback"> Would this say "Up Arrow Pressed" after the first time? Think about when the script stops. </div> </div> <div class="responseDeclaration" identifier="resp1"> <div class="correctResponse" identifier="c1"></div> </div> </div> </body> </html>

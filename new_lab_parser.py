@@ -19,7 +19,8 @@ from functools import reduce
 	### set of tags that should note where a certain piece of info lies ###
 	### please add to this set ### 
 tags = {"title:", "resource:", "quiz:", "assignment:", "group:", "forum:", "video:", "reading:", "big-idea:", "learning-goal:"}
-vertical_tags = {"resource:", "quiz:", "assignment:", "group:", "forum:"}
+vertical_tags = {"resource:", "assignment:", "group:", "forum:"}
+#NOTE: vertical_tag "quiz" is removed for now because quiz parser isn't working yet #
 
 ### helper functions ###
 
@@ -269,10 +270,9 @@ def make_html(line):
 		### check for quiz ###
 		for line in lines:
 			if "assessment-data" in line:
-				lines = process_quiz(lines)
+				# lines = process_quiz(lines)
+
 				break
-		
-		
 		
 		lines = fix_links(lines)
 		lines = insert_snap(lines)

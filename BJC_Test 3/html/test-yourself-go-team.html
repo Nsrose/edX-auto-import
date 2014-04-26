@@ -1,0 +1,42 @@
+<html> <head> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title>Test Yourself: Go Team!</title> </head> <body> <problem> <div class="prompt"> <p> Without trying this in <span class="snap">snap</span>, try to answer the following question: <br /> <br /> What does the following set of scripts do when the <tt>Turn1</tt> message is broadcast? </p> <p><img src="http://bjc.berkeley.edu/bjc-r/img/prog/receive-turn1-broadcast.png" alt="receive turn1 broadcast script" />&nbsp;&nbsp;&nbsp;&nbsp; <img src="http://bjc.berkeley.edu/bjc-r/img/prog/receive-turn2-broadcast.png" alt="receive turn2 broadcast script" /> </p> <p> Choose one: </p> </div> <multiplechoiceresponse> <choicegroup type="MultipleChoice"> <choice correct="false">The sprite says &quot;Go!&quot; and then &quot;Team!&quot; and then stops.</choice> <choice correct="true">The sprite repeatedly says &quot;Go!&quot; and then &quot;Team!&quot; until you hit the red Stop button.</choice> <choice correct="false">Nothing happens - the script does not work.</choice> <choice correct="false">The sprite says &quot;Go!&quot; and then &quot;Team!&quot;, repeating a few times, and then stops by itself.</choice> </choicegroup> </multiplechoiceresponse> <solution> <div class="detailed_solution"> <p>Explanation</p> <p> Right! Here, we see an <em>infinite loop,</em> or a never-ending loop. Whenever this happens in Snap<em>!</em>, we can always stop it by pressing the Stop button at the top right of the window, just above the stage. </p> <p> Why does this happen? Well, when you the <code>Turn1</code> message is first broadcast, the sprite says <code> Go!</code> for half a second, and then broadcasts a <code>Turn2</code> message. </p> <p> If there is any character that has a script that responds to the <code>Turn2</code> message, it will perform that script. In this case, the same sprite has a script that responds to the <code>Turn2</code> message, and so it will run the corresponding script. It says <code>Team!</code> and then broadcasts a <code>Turn1</code> message. But, it also has a script that responds to the <code>Turn1</code> message, which in turn sends a <code>Turn2</code> message, and so on. This continues until the scripts are forced to stop. </p> </div> </solution> </problem> </body> </html>

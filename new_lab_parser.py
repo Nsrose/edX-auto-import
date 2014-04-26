@@ -5,6 +5,11 @@ from shutil import copyfile, move
 from functools import reduce
 
 
+#########################################
+## Backend Lab Parser for Berkeley BJC ##
+#########################################
+
+
 ### Creates folders containing the necessary items to import into an edX course ###
 ### Should make a sequential file, a folder of vertical files, and a folder of html files ###
 
@@ -164,6 +169,74 @@ def fix_links(lines):
 			result.append(line)
 	return result 
 
+
+def process_quiz(lines):
+	"""Converts html into proper edX format for quiz"""
+	new_lines = []
+	start = lines.index("<html>")
+	end = lines.index("<body>") + 1
+	new_lines += lines[start:end]
+	
+	new_lines += ["<problem>"]
+	start_index = lines.index('<div class="prompt">')
+	for i in range(start_index, len(lines)):
+		if lines[i] == '</div>':
+			endx = i 
+			break
+	for line in lines[start_index:endx+1]:
+		new_lines += [line]
+	new_lines += ['<multiplechoiceresponse>', '<choicegroup type="MultipleChoice">']
+	
+	## finding correct choice ##
+	for i in range(len(lines)):
+		if 'class="correctResponse"' in lines[i]:
+			c_index = i
+			break
+	correct_line = lines[c_index]
+	f = lambda x: 'identifier' in x
+	l = list(filter(f, correct_line.split()))[0]
+	l = l.rsplit('=', 1)[1]
+	correct_choice = l.rstrip('></div>')
+	############################
+
+	for i in range(len(lines)):
+		line = lines[i]
+		if '<div class="choice"' in line:
+			choice = line.split()[2].rsplit('=', 1)[1].rstrip('>')
+			inner_content = lines[i+2:i+3].pop()	
+			if choice == correct_choice:
+				new_lines += ['<choice correct="true">' + inner_content + "</choice>"]
+			else:
+				new_lines += ['<choice correct="false">' + inner_content + "</choice>"]
+	new_lines += ['</choicegroup>', '</multiplechoiceresponse>', '<solution>']
+	new_lines += ['<div class="detailed_solution">', '<p>Explanation</p>']
+
+	### feedback ###
+	for i in range(len(lines)):
+		if 'identifier=' + correct_choice + '>' in lines[i]:
+			start_index = i
+			break
+	k = start_index
+	while k < len(lines):
+		k += 1
+		if "</div>" in lines[k]:
+			endx = k
+			break
+	start_index = endx + 2
+	k = start_index
+	while k < len(lines):
+		k += 1
+		if "</div>" in lines[k]:
+			endx = k
+			break
+	feedback = lines[start_index:endx]
+	new_lines += feedback
+	new_lines += ['</div>', '</solution>', '</problem>', '</body>', '</html>']
+	return new_lines 
+
+
+
+
 def insert_snap(lines):
 	"""Inserts snap iframe to top of html page"""
 	index = lines.index('<head>') + 1
@@ -171,6 +244,7 @@ def insert_snap(lines):
 	ilines = iframe.read()
 	lines.insert(index, ilines)
 	return lines 
+
 
 
 def make_html(line):
@@ -192,6 +266,14 @@ def make_html(line):
 		lines = content.readlines() 
 		lines = [x for x in [s.strip() for s in lines] if not x == '']
 		lines = insert_title(title, lines)
+		### check for quiz ###
+		for line in lines:
+			if "assessment-data" in line:
+				lines = process_quiz(lines)
+				break
+		
+		
+		
 		lines = fix_links(lines)
 		lines = insert_snap(lines)
 		new_file = open(destination, 'w') 

@@ -1,1 +1,42 @@
-<html> <head> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title>Experiment with Drawing Commands</title> </head> <body> <h1>Experiment with Drawing Commands</h1> <p> Try to get comfortable with the blocks under the <b>Motion</b> tab and the <b>Pen</b> tab. Figure out what each one does, and try to use these blocks to draw a square or a simple picture. Get started by testing these blocks: </p> <p> <img src="http://bjc.berkeley.edu/bjc-r/img/topic1/topic1_move10steps.png" alt="Move 10 Steps Block"/> </p> <p> <img src="http://bjc.berkeley.edu/bjc-r/img/topic1/topic1_turnrightxdegs.png" alt="Turn Right 15 Degrees Block"/> </p> <p> <img src="http://bjc.berkeley.edu/bjc-r/img/topic1/topic1_clear.png" alt="Clear Block"/> </p> <p> <img src="http://bjc.berkeley.edu/bjc-r/img/topic1/topic1_pendown.png" alt="Pen Down Block"/> </p> <p> <img src="http://bjc.berkeley.edu/bjc-r/img/topic1/topic1_penup.png" alt="Pen Up Block"/> </p> <p> Tips and Tricks: <ol> <li> Once the pen is down, it stays down even in a different script. Use the <tt>pen up</tt> block to lift the pen so that no lines will be drawn. </li> <li> You also will want to show the direction and x and y position of the sprite. In the Motion tab, you can select for these to be shown on the stage as described in the <a href="http://bjc.berkeley.edu//bjc=r/cur/programming/intro/sprites/sprites-sensor-blocks.html">Reporters</a> activity you saw earlier in the lab. </li> <li> Try this: Does the <b>turn</b> block change the x or the y position? </li> </ol> </p> </body> </html>
+<html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title>Experiment with Drawing Commands</title> </head> <body> <h1>Experiment with Drawing Commands</h1> <p> Try to get comfortable with the blocks under the <b>Motion</b> tab and the <b>Pen</b> tab. Figure out what each one does, and try to use these blocks to draw a square or a simple picture. Get started by testing these blocks: </p> <p> <img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/topic1/topic1_move10steps.png" alt="Move 10 Steps Block"/> </p> <p> <img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/topic1/topic1_turnrightxdegs.png" alt="Turn Right 15 Degrees Block"/> </p> <p> <img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/topic1/topic1_clear.png" alt="Clear Block"/> </p> <p> <img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/topic1/topic1_pendown.png" alt="Pen Down Block"/> </p> <p> <img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/topic1/topic1_penup.png" alt="Pen Up Block"/> </p> <p> Tips and Tricks: <ol> <li> Once the pen is down, it stays down even in a different script. Use the <tt>pen up</tt> block to lift the pen so that no lines will be drawn. </li> <li> You also will want to show the direction and x and y position of the sprite. In the Motion tab, you can select for these to be shown on the stage as described in the <a href="http://bjc.berkeley.edu//bjc=r/cur/programming/intro/sprites/sprites-sensor-blocks.html">Reporters</a> activity you saw earlier in the lab. </li> <li> Try this: Does the <b>turn</b> block change the x or the y position? </li> </ol> </p> </body> </html>

@@ -240,7 +240,10 @@ def process_quiz(lines):
 
 def insert_snap(lines):
 	"""Inserts snap iframe to top of html page"""
-	index = lines.index('<head>') + 1
+	for i in range(len(lines)):
+		if '<head>' in lines[i]:
+			index = i 
+			break
 	iframe = open("snap-frame.html", 'r')
 	ilines = iframe.read()
 	lines.insert(index, ilines)

@@ -1,1 +1,42 @@
-<html> <head> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title> Welcome to <em>Snap!</em> </title> </head> <body> <h1>Welcome to <span class="snap">snap</span></h1> <p> <span class="snap">snap</span> is a programming language, which you can use to tell a computer what to do. A <i>program</i> is a particular set of instructions for the computer to follow. </p> <p> Programs in most languages use only letters (and punctutation), but <span class="snap">snap</span> is different: it's a visual language. Instead of writing a program only using the keyboard, you will drag pictures of blocks and click them together. </p> <p class="quoteBrown"> The following is a program in <span class="snap">snap</span>: <Br> <br> <image class="indent" src="http://bjc.berkeley.edu/bjc-r/img/prog/script.png"></image> <br> <br> Can you guess what it might do? </p> <p> <span class="snap">snap</span> is different that many other languages in another way&mdash; you run it in a web browser like Firefox or Chrome. At this time, we recommend you use the <a href="http://www.google.com/chrome/">Chrome browser</a>. The url that you can use to always get to <em>Snap!</em> is: </p> <p class="center " style="font-size:150%;line-height: 150%"> <a href="http://snap.berkeley.edu/run" target="_blank"><b>http://snap.berkeley.edu/run</b></a> </p> <p> In order to save your programs, the first thing you'll need to do is make an account.  In the <span class="snap">snap</span> browser window, Find the cloud-shaped button in the top toolbar on the upper left corner of the window:</p> <img class="indent" src="http://bjc.berkeley.edu/bjc-r/img/sys/button-cloud-with-context.png" alt="cloud icon"/>. <p> Click it, select the "sign up" option in the menu, and follow the instructions there. You will need to check your email after creating your account to get your initial password. </p> <img class="indent" src="http://bjc.berkeley.edu/bjc-r/img/sys/dialog-cloud-signup.png" alt="signing up for the cloud"/> </body> </html>
+<html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title> Welcome to <em>Snap!</em> </title> </head> <body> <h1>Welcome to <span class="snap">snap</span></h1> <p> <span class="snap">snap</span> is a programming language, which you can use to tell a computer what to do. A <i>program</i> is a particular set of instructions for the computer to follow. </p> <p> Programs in most languages use only letters (and punctutation), but <span class="snap">snap</span> is different: it's a visual language. Instead of writing a program only using the keyboard, you will drag pictures of blocks and click them together. </p> <p class="quoteBrown"> The following is a program in <span class="snap">snap</span>: <Br> <br> <image class="indent" src="http://bjc.berkeley.edu/bjc-r/img/prog/script.png"></image> <br> <br> Can you guess what it might do? </p> <p> <span class="snap">snap</span> is different that many other languages in another way&mdash; you run it in a web browser like Firefox or Chrome. At this time, we recommend you use the <a href="http://www.google.com/chrome/">Chrome browser</a>. The url that you can use to always get to <em>Snap!</em> is: </p> <p class="center " style="font-size:150%;line-height: 150%"> <a href="http://snap.berkeley.edu/run" target="_blank"><b>http://snap.berkeley.edu/run</b></a> </p> <p> In order to save your programs, the first thing you'll need to do is make an account.  In the <span class="snap">snap</span> browser window, Find the cloud-shaped button in the top toolbar on the upper left corner of the window:</p> <img class="indent" src="http://bjc.berkeley.edu/bjc-r/img/sys/button-cloud-with-context.png" alt="cloud icon"/>. <p> Click it, select the "sign up" option in the menu, and follow the instructions there. You will need to check your email after creating your account to get your initial password. </p> <img class="indent" src="http://bjc.berkeley.edu/bjc-r/img/sys/dialog-cloud-signup.png" alt="signing up for the cloud"/> </body> </html>

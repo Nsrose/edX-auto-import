@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <!-- put the following in exactly --> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title> A (Non-Video) Game </title><!--ORIGINAL NAME: A (Non-Video) Game--> </head> <body> <h1>A (non-video) Game</h1> <p> Let's play a number-guessing game (you have already <a href="http://bjc.berkeley.edu/bjc-r/cur/programming/conditionals/number-guessing-game-v2-0.html">seen this before</a>). &nbsp; </p> <p> Between your partner and yourself, decide who will be the <i>guesser</i> and the the <i>picker</i>. The picker chooses a number between 1 and 50, privately. The guesser's role is to determine what the number is, and to that end asks the picker questions with the only possible answers being "yes" or "no". </p> <p> The guesser should try two different strategies to playing this game: </p> <ol> <li> <u>Guessing in sequence</u>: "Is the number 1?", "Is the number 2?", "Is the number 3?", and so on. </li> <li> <u>Guessing halfway</u>: You know the number must be between 1 and 50, so you start off by asking "Is the number greater than 25?". If the answer is "yes", you instantly know that it must be between 26 and 50, so you ask "Is the number greater than 37?" (that is, halfway between 26 and 50). <br> <br> If the answer to the original question was no, the number must be between 1 and 25, so you ask "Is the number greater than 12?" </li> </ol> <p> Play several times.  The picker should pick a wide variety of numbers, while the guesser should use each strategy alternately. </p> <p class="quoteGreen"> As you play each game, think about the ways in which one strategy is better than the other.  Which strategy would be better if, say, the guessing game involved numbers from 1 to 1000?  From 1 to a million?  From 1 to 3? <br><br> Are there other stragtegies you can think of?</p> </body> </html>

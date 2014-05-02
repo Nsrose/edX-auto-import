@@ -1,0 +1,18 @@
+<problem markdown="null" display_name="Quiz 5.3" showanswer="finished">
+  <p>Which of the following apply to OOP?</p>
+  <choiceresponse>
+    <checkboxgroup direction="vertical">
+      <choice correct="true">It is data-centric</choice>
+      <choice correct="true">Programs are divided into objects</choice>
+      <choice correct="false">Data can be accessed by external functions</choice>
+      <choice correct="true">Objects can communicate with eachother through methods</choice>
+      <choice correct="false">All of the above</choice>
+    </checkboxgroup>
+  </choiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>In OOP's data is hidden; and so it cannot be accessed by external functions. However, objects can communicate with eachother through function calls.</p>
+    </div>
+  </solution>
+</problem>

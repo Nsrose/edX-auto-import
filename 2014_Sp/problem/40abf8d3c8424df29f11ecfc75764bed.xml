@@ -1,0 +1,19 @@
+<problem markdown="null" display_name="Quiz 5.1" showanswer="finished">
+  <p>Programming Paradigms affect:</p>
+  <choiceresponse>
+    <checkboxgroup direction="vertical">
+      <choice correct="false">The way data is stored in a program</choice>
+      <choice correct="false">The programming style</choice>
+      <choice correct="false">The way variables are created</choice>
+      <choice correct="false">The way the user interacts with the computer</choice>
+      <choice correct="true">All of the above</choice>
+      <choice correct="false">None of the above</choice>
+    </checkboxgroup>
+  </choiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>All theses options fall under the stylistic category of a program. Mainly, programming paradigms determine the programming style. This concept will become clearer through programming practice with some of these Programming Paradigms. The most commonly used one is OOP.</p>
+    </div>
+  </solution>
+</problem>

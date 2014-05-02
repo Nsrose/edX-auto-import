@@ -1,0 +1,23 @@
+<problem markdown="null" display_name="Quiz 9.2" showanswer="finished">
+  <p>Now we are trying to do the reverse of downUp. For example, if we input 'put' into our new function upDown we would get 'put ut t ut put' in return. Which of the following recursive calls should I insert into the report slot for my function to work this way?</p>
+  <img src="http://tinyurl.com/qz5vyx7"/>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">
+        <img src="http://tinyurl.com/nqeoq7w"/>
+      </choice>
+      <choice correct="true">
+        <img src="http://tinyurl.com/qjoza3k"/>
+      </choice>
+      <choice correct="false">
+        <img src="http://tinyurl.com/p5dsbrb"/>
+      </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The third case would return 't ut ut put put' because the ordering is wrong and the first choice would run forever, since we are calling upDown with the same word everytime. This means that the length of the input word will never be 1, unless the original word has a length 1, and so it will keep calling upDown recursively.</p>
+    </div>
+  </solution>
+</problem>

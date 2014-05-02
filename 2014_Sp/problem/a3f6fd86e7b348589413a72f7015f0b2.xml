@@ -1,0 +1,19 @@
+<problem markdown="null" display_name="Quiz 3.4" showanswer="finished">
+  <p>Which of the following is NOT true about functions?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Functions implement abstraction</choice>
+      <choice correct="false">Functions can have more than one inputs for the same output</choice>
+      <choice correct="true">Functions can have more that one outputs for the same input</choice>
+      <choice correct="false">Functions always give the same answer to a given input</choice>
+      <choice correct="false">Functions can have side effects</choice>
+      <choice correct="false">None of the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Functions must have exactly one output unique to each input. For example, the a functions returns your age, then eveytime you call it for you (with your name as an input) you must get the same age, since your age is not fluctuating.</p>
+    </div>
+  </solution>
+</problem>

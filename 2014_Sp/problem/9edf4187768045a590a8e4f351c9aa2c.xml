@@ -1,0 +1,33 @@
+<problem markdown="null" display_name="Quiz 7.4" showanswer="finished">
+  <p>Enter the numbers 1 through 6 to indicate the fastest to slowest runtimes below dependent on the size of the input, 1 being the fastest:</p>
+  <p>Logarithmic:</p>
+  <numericalresponse answer="2">
+    <formulaequationinput/>
+  </numericalresponse>
+  <p>Constant:</p>
+  <numericalresponse answer="1">
+    <formulaequationinput/>
+  </numericalresponse>
+  <p>Quadratic:</p>
+  <numericalresponse answer="4">
+    <formulaequationinput/>
+  </numericalresponse>
+  <p>Exponential:</p>
+  <numericalresponse answer="6">
+    <formulaequationinput/>
+  </numericalresponse>
+  <p>Cubic:</p>
+  <numericalresponse answer="5">
+    <formulaequationinput/>
+  </numericalresponse>
+  <p>Linear:</p>
+  <numericalresponse answer="3">
+    <formulaequationinput/>
+  </numericalresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The fastest and most efficient is constant, since this means that regardless of the size of the input we use, the time the function will take to complete is always the same. Exponential is the oposite. The larger the size, the more time increases to complete the fucntion call.</p>
+    </div>
+  </solution>
+</problem>

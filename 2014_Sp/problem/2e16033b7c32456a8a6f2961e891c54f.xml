@@ -1,0 +1,32 @@
+<problem markdown="null" display_name="Test yourself: Total Turing">
+  <p>1. Through how many degrees did your sprite turn altogether (not per side) when you drew a triangle?</p>
+  <numericalresponse answer="360">
+    <formulaequationinput/>
+  </numericalresponse>
+  <p>2. Through how many degrees did your sprite turn altogether when you drew a pentagon?</p>
+  <numericalresponse answer="360">
+    <formulaequationinput/>
+  </numericalresponse>
+  <p>3. Through how many degrees did your sprite turn altogether when you drew a five-pointed star?</p>
+  <numericalresponse answer="720">
+    <formulaequationinput/>
+  </numericalresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Polygons that don't intersect themselves require a total turning of 360 degrees — one full circle. Stars turn all the way around more than once. Try using something like a pencil (flat on the table) to simulate a sprite tracing the path of a star.</p>
+    </div>
+  </solution>
+  <p>4. What is the smallest number you can put into the numeric input of the repeat block below to produce the picture shown?</p>
+  <img src="http://bjc.eecs.berkeley.edu/bjc-r/img/prog/nonagon-script.png"/>
+  <img src="http://bjc.eecs.berkeley.edu/bjc-r/img/prog/nonagon.png"/>
+  <numericalresponse answer="9">
+    <formulaequationinput/>
+  </numericalresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>This figure is a nine-pointed star.</p>
+    </div>
+  </solution>
+</problem>

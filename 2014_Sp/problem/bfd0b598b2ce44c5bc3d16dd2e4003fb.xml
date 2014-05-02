@@ -1,0 +1,17 @@
+<problem markdown="null" display_name="Quiz 9.4" showanswer="finished">
+  <p>Which of the following do you agree with the most:</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Recursion is more powerful than iteration (i.e., loops), and almost always, writing a recursive solution is easier than an iterative one.</choice>
+      <choice correct="true">Recursion is just as powerful as iteration (i.e., loops), and almost always, writing a recursive solution is easier than an iterative one.</choice>
+      <choice correct="false">Recursion is more powerful than iteration (i.e., loops), and almost always, writing a recursive solution is harder than an iterative one. </choice>
+      <choice correct="false">Recursion is just as powerful as iteration (i.e., loops), and almost always, writing a recursive solution is harder than an iterative one.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>One of the key big ideas here is that recursion is no more powerful than iteration -- that is, anything that could be written recursively could be iteratively (and vice-versa). That said, we've found that thinking functionally, in which there is no state and mutation and you use recursive solutions, is often easier than iterative solutions. Certainly it depends on the problem, but students should certainly add recursion to their arsenal so that they are ready to use it when the problem calls for it.</p>
+    </div>
+  </solution>
+</problem>

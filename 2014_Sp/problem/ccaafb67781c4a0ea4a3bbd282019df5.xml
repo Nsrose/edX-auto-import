@@ -1,0 +1,19 @@
+<problem markdown="Given infinite storage and a list of students of length N: What's the worst-case running time as a function of the size of N?&#10;     (x) Constant&#10;     ( ) Logarithmic&#10;     ( ) Linear&#10;     ( ) Quadratic&#10;     ( ) Exponential&#10;     &#10;[explanation]&#10;If you have enough lead time, and enough space, you initialize a huge list (as big as the biggest possible student ID number) with 0, or 𝚏𝚊𝚕𝚜𝚎. Then, go through all the students in N, and write 1, or 𝚝𝚛𝚞𝚎 in the slot indexed by their student ID. Then, when you're given a particular student S, you look up in the list under their student ID index (constant time), and return the value in that slot.&#10;&#10;(NB: This question presupposes that you can get to any part of your storage in constant time -- like you can do with lists using $item (_num_) of (_list_) $ in Snap!.)&#10;[explanation]&#10;" display_name="Quiz 7.7" showanswer="finished">
+  <p>Given infinite storage and a list of students of length N: What's the worst-case running time as a function of the size of N?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">Constant</choice>
+      <choice correct="false">Logarithmic</choice>
+      <choice correct="false">Linear</choice>
+      <choice correct="false">Quadratic</choice>
+      <choice correct="false">Exponential</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>If you have enough lead time, and enough space, you initialize a huge list (as big as the biggest possible student ID number) with 0, or 𝚏𝚊𝚕𝚜𝚎. Then, go through all the students in N, and write 1, or 𝚝𝚛𝚞𝚎 in the slot indexed by their student ID. Then, when you're given a particular student S, you look up in the list under their student ID index (constant time), and return the value in that slot.</p>
+      <p>(NB: This question presupposes that you can get to any part of your storage in constant time -- like you can do with lists using $item (_num_) of (_list_) $ in Snap!.)</p>
+    </div>
+  </solution>
+</problem>

@@ -1,0 +1,11 @@
+<problem markdown="Creative commons allows people to do which of the following: (Check all that apply.)&#10;     [x] Contol the conditions under which their work is used&#10;     [x] Avoid hassle with copyright issues&#10;     [ ] Offers secure protection from people who wish to use your work&#10;     [x] Legally share individually created works" display_name="Creative Commons" showanswer="finished">
+  <p>Creative commons allows people to do which of the following: (Check all that apply.)</p>
+  <choiceresponse>
+    <checkboxgroup direction="vertical">
+      <choice correct="true">Contol the conditions under which their work is used</choice>
+      <choice correct="true">Avoid hassle with copyright issues</choice>
+      <choice correct="false">Offers secure protection from people who wish to use your work</choice>
+      <choice correct="true">Legally share individually created works</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

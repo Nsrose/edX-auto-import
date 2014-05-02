@@ -1,0 +1,17 @@
+<problem markdown="null" display_name="Multiple Choice">
+  <img src="/static/normal-recursive-tree-without-scaling.jpg"/>
+  <p>Choose one:</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">We changed the turn amount between each branch.</choice>
+      <choice correct="true">We changed the scaling factor (how much the length decreases each time).</choice>
+      <choice correct="false">We added additional recursive calls to the function and other angle stuff to make it all work out.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Right! At each stage, the branches are staying the same length, rather than shrinking.</p>
+    </div>
+  </solution>
+</problem>

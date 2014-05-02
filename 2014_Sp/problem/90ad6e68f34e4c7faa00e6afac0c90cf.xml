@@ -1,0 +1,21 @@
+<problem markdown="Which of the following is true?&#10;     ( ) Moore's Law says that processor performance doubles every 18 months &#10;     ( )Moore's Law has ended &#10;     ( )Current computers are fast enough for most applications &#10;     (x)None of the above &#10;     ( )All of the above &#10;     &#10;[explanation]&#10;Surprisingly, none of these are true!&#10;&#10;a. is false because Moore's Law says that the number of transistors on an integrated circuit doubles every 18 months.&#10;&#10;b. is false because Moore's Law is going strong, and those transistors are being used for multi-core processors and on-core memory.&#10;&#10;c. is false because you don't even know about the amazing applications you don't have yet that require incredible performance to succeed -- like speech recognition, augmented reality, etc.&#10;[explanation]&#10;" display_name="Quiz 22.4" showanswer="finished">
+  <p>Which of the following is true?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Moore's Law says that processor performance doubles every 18 months </choice>
+      <choice correct="false">Moore's Law has ended </choice>
+      <choice correct="false">Current computers are fast enough for most applications </choice>
+      <choice correct="true">None of the above </choice>
+      <choice correct="false">All of the above </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Surprisingly, none of these are true!</p>
+      <p>a. is false because Moore's Law says that the number of transistors on an integrated circuit doubles every 18 months.</p>
+      <p>b. is false because Moore's Law is going strong, and those transistors are being used for multi-core processors and on-core memory.</p>
+      <p>c. is false because you don't even know about the amazing applications you don't have yet that require incredible performance to succeed -- like speech recognition, augmented reality, etc.</p>
+    </div>
+  </solution>
+</problem>

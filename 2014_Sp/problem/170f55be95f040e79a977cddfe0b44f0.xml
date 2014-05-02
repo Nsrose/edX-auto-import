@@ -1,0 +1,17 @@
+<problem markdown="Which of the following is not true about qubits?&#10;     ( ) A qubit derives its 'name from quantum bit'&#10;     ( ) A qubit can exist in both '0' and '1' states at the same time&#10;     (x) A qubit is an arrangement of four bits&#10;     ( ) The qubit is the fundamental building block of a quantum computer&#10;     &#10;[explanation]&#10;A qubit works exactly like a bit in that it can take the values od 0 or 1, but also has a third superposition state of 0 and 1.&#10;[explanation]&#10;" display_name="Quiz 24.3" showanswer="finished">
+  <p>Which of the following is not true about qubits?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">A qubit derives its 'name from quantum bit'</choice>
+      <choice correct="false">A qubit can exist in both '0' and '1' states at the same time</choice>
+      <choice correct="true">A qubit is an arrangement of four bits</choice>
+      <choice correct="false">The qubit is the fundamental building block of a quantum computer</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>A qubit works exactly like a bit in that it can take the values od 0 or 1, but also has a third superposition state of 0 and 1.</p>
+    </div>
+  </solution>
+</problem>

@@ -1,0 +1,13 @@
+<problem markdown="TRIVIA QUESTION:&#10;&#10;What was the trembling name of the first general-purpose mobile robot that employed AI and was developed by the Artificial Intelligence Center of Stanford Research Institute in the late 1960s?&#10;&#10;= Shakey the Robot&#10;&#10;&#10;[explanation]&#10;Shakey the Robot. Shakey the Robot was developed between 1966 and 1972. At the time robots merely followed the step by step instructions given by the programmer or operator. What made Shakey different was it could analyze the command and break it down by itself rather than having to be given step by step instructions. The project was funded by DARPA. The robots main programming (operating system) was done in Lisp and STRIPS (Stanford Research Institute Problem Solver) was the software it ran to carry out its tasks.&#10;[explanation]&#10;" display_name="Quiz 20.1" showanswer="answered">
+  <p>TRIVIA QUESTION:</p>
+  <p>What was the trembling name of the first general-purpose mobile robot that employed AI and was developed by the Artificial Intelligence Center of Stanford Research Institute in the late 1960s?</p>
+  <stringresponse answer="Shakey the Robot" type="ci">
+    <textline size="20"/>
+  </stringresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Shakey the Robot. Shakey the Robot was developed between 1966 and 1972. At the time robots merely followed the step by step instructions given by the programmer or operator. What made Shakey different was it could analyze the command and break it down by itself rather than having to be given step by step instructions. The project was funded by DARPA. The robots main programming (operating system) was done in Lisp and STRIPS (Stanford Research Institute Problem Solver) was the software it ran to carry out its tasks.</p>
+    </div>
+  </solution>
+</problem>

@@ -1,0 +1,16 @@
+<problem markdown="According to Raffi, 1 tweet is equivalent to 140 characters, which is approximately 200 bytes. How could this limitation affect international tweeting? &#10;     (x) Different languages can express different size sentences in the same amount of space.&#10;     ( ) 140 characters is not enough for a single sentence in some languages.&#10;     ( ) 140 characters allows to much space to write in&#10;&#10;[explanation]&#10;In languages such as Chinese, a singe word can be represented by a single character. This means that a Twitter user in China could have more content in his tweet than say a Twitter user in the US.&#10;[explanation]" display_name="Quiz 21.2" showanswer="finished">
+  <p>According to Raffi, 1 tweet is equivalent to 140 characters, which is approximately 200 bytes. How could this limitation affect international tweeting? </p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">Different languages can express different size sentences in the same amount of space.</choice>
+      <choice correct="false">140 characters is not enough for a single sentence in some languages.</choice>
+      <choice correct="false">140 characters allows to much space to write in</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>In languages such as Chinese, a singe word can be represented by a single character. This means that a Twitter user in China could have more content in his tweet than say a Twitter user in the US.</p>
+    </div>
+  </solution>
+</problem>

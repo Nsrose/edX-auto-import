@@ -1,0 +1,18 @@
+<problem markdown="Select all answers below that are true about large scale distributed computing:&#10;     [x] Distrubuted computing is a good application for Google searches.&#10;     [] Distrubuted computing can be run on a single computer.&#10;     [] Modern smartphones can run quickly because they have distributed computing algorithms on them.&#10;     [x] Distributed computing is often utilized to help compute larger tasks.&#10;     &#10;[explanation]&#10;Due to the amount of Google searches, Google needs distrubuted computing.&#10;Distributed computing is defined as multiple computers working towards one solution.&#10;[explanation]&#10;" display_name="Multiple Choice">
+  <p>Select all answers below that are true about large scale distributed computing:</p>
+  <choiceresponse>
+    <checkboxgroup direction="vertical">
+      <choice correct="true">Distrubuted computing is a good application for Google searches.</choice>
+      <choice correct="false">Distrubuted computing can be run on a single computer.</choice>
+      <choice correct="false">Modern smartphones can run quickly because they have distributed computing algorithms on them.</choice>
+      <choice correct="true">Distributed computing is often utilized to help compute larger tasks.</choice>
+    </checkboxgroup>
+  </choiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Due to the amount of Google searches, Google needs distrubuted computing.</p>
+      <p>Distributed computing is defined as multiple computers working towards one solution.</p>
+    </div>
+  </solution>
+</problem>

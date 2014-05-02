@@ -1,0 +1,6 @@
+<problem display_name="Question 1" markdown="Write your answer to Question 1 here:&#10;&#10;= answer&#10;&#10;" rerandomize="never" showanswer="never">
+  <p>Write your answer to Question 1 here:</p>
+  <stringresponse answer="answer" type="ci">
+    <textline size="20"/>
+  </stringresponse>
+</problem>

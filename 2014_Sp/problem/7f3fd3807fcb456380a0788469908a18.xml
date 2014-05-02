@@ -1,0 +1,15 @@
+<problem markdown="Let's break down the number 345.&#10;&#10;How many 100's are there?  (Also written as 10^2):&#10;= 3&#10;&#10;How many 10's are there?   (Also written as 10^1):&#10;= 4&#10;&#10;How many 1's are there?    (Also written as 10^0):&#10;= 5&#10;&#10;" display_name="Base 10 Example 1">
+  <p>Let's break down the number 345.</p>
+  <p>How many 100's are there?  (Also written as 10^2):</p>
+  <numericalresponse answer="3">
+    <formulaequationinput/>
+  </numericalresponse>
+  <p>How many 10's are there?   (Also written as 10^1):</p>
+  <numericalresponse answer="4">
+    <formulaequationinput/>
+  </numericalresponse>
+  <p>How many 1's are there?    (Also written as 10^0):</p>
+  <numericalresponse answer="5">
+    <formulaequationinput/>
+  </numericalresponse>
+</problem>

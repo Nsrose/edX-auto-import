@@ -1,0 +1,14 @@
+<problem markdown="Did you read this article?&#10;     (x) yes!&#10;     ( ) no&#10;     &#10;[explanation]&#10;&#10;[explanation]" display_name="Multiple Choice">
+  <p>Did you read this article?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">yes!</choice>
+      <choice correct="false">no</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+    </div>
+  </solution>
+</problem>

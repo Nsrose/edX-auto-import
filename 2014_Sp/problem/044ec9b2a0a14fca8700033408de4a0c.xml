@@ -1,0 +1,20 @@
+<problem markdown="null" display_name="Quiz 6.2" showanswer="finished">
+  <p>Now that you have an idea of what algorithms are, let's do some brainstorming. Which of the following could be important when choosing the best algorithm to solve a problem? Check all that apply.</p>
+  <choiceresponse>
+    <checkboxgroup direction="vertical">
+      <choice correct="true">Length/Time</choice>
+      <choice correct="true">Efficiency</choice>
+      <choice correct="true">Side effects</choice>
+      <choice correct="false">None of the above</choice>
+    </checkboxgroup>
+  </choiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The following will be based on the example of choosing a cooking recipe.</p>
+      <p><b>Length/Time:</b> Assume you are tyring to boil an egg. This should be a simple fast task. So you wouldn't want an algorithm/recipe that would take 24hours to boil an egg.</p>
+      <p><b>Efficiency:</b> Assume you are trying to bake a cake. A recipe tha gives you tips on how to make the cake more moist or nice smelling is preferred to one than just names the products to combine.</p>
+      <p><b>Side Effects:</b> Assume you are trying to bake potatoes. You want to make sure that the recipe you follow does not involve a risk of lighting the kitchen on fire for example.</p>
+    </div>
+  </solution>
+</problem>

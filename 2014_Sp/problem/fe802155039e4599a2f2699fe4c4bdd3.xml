@@ -1,0 +1,18 @@
+<problem markdown="What causes the most headaches for software and hardware designers with multi-core computing?&#10;     ( ) Control (the &quot;brain of the processor&quot;)&#10;     ( ) Datapath (the &quot;brawn&quot; or &quot;wiring&quot; of the processor)&#10;     (x) Memory&#10;     ( ) Input&#10;     ( ) Output&#10;     &#10;[explanation]&#10;This is quite a difficult question given that CS10 students don't typically know what each of the options are very much at this point. You'll really learn about this if you continue to take classes in computing, specifically &quot;machine structures&quot;-type courses that explain how computers work at the architectural level. If you have multiple cores working on data, the hardest thing to design and program is a system that manages reading and writing to the shared resource of memory, since each core may have its own copy!&#10;[explanation]&#10;" display_name="Quiz 8.1" showanswer="finished">
+  <p>What causes the most headaches for software and hardware designers with multi-core computing?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Control (the "brain of the processor")</choice>
+      <choice correct="false">Datapath (the "brawn" or "wiring" of the processor)</choice>
+      <choice correct="true">Memory</choice>
+      <choice correct="false">Input</choice>
+      <choice correct="false">Output</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>This is quite a difficult question given that CS10 students don't typically know what each of the options are very much at this point. You'll really learn about this if you continue to take classes in computing, specifically "machine structures"-type courses that explain how computers work at the architectural level. If you have multiple cores working on data, the hardest thing to design and program is a system that manages reading and writing to the shared resource of memory, since each core may have its own copy!</p>
+    </div>
+  </solution>
+</problem>

@@ -1,0 +1,21 @@
+<problem markdown="null" display_name="Multiple Choice">
+  <p>Question 2</p>
+  <p>What would happen if you changed the argument size to be -100?</p>
+  <img src="http://bjc.berkeley.edu/bjc-r/img/lab-10/tree-code-snap.png" alt="There should be an image here" title="There should be an image here"> </img>
+  <img src="http://bjc.berkeley.edu/bjc-r/img/recur/tree-size-100-call.gif" alt="There should be an image here" title="There should be an image here"> </img>
+  <p>Choose one answer.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">The program will never stop running and a lot of different branches will be 		drawn</choice>
+      <choice correct="false">It will never stop running and only a single branch will be drawn</choice>
+      <choice correct="false">Nothing - it will work just like if the same positive value was provided</choice>
+      <choice correct="true">The image will be flipped upside down but will otherwise look the same</choice>
+      <choice correct="false">Nothing will be drawn</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+    </div>
+  </solution>
+</problem>

@@ -1,0 +1,18 @@
+<problem markdown="null" display_name="Quiz 2.6" showanswer="finished">
+  <img src="http://www.fxguide.com/wp-content/uploads/2010/10/10Dec/3d/Silestone8.jpg" height="200" width="400"/>
+  <p>Is this image a photograph or a 3D rendering of reality?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">3D Rendering</choice>
+      <choice correct="false">Photograph</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Most of the objects were created as 3D models with photographs projected onto them.</p>
+      <p>Check out this site to read more:</p>
+      <a href="http://www.fxguide.com/featured/3D_or_Real_Above_Everything_Else/">http://www.fxguide.com/featured/3D_or_Real_Above_Everything_Else/</a>
+    </div>
+  </solution>
+</problem>

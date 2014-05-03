@@ -1,0 +1,14 @@
+<problem markdown="Did you complete this reading?&#10;     (x) Yes!&#10;     ( ) Not yet&#10;     &#10;[explanation]&#10;&#10;[explanation]&#10;" display_name="Checkboxes">
+  <p>Did you complete this reading?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">Yes!</choice>
+      <choice correct="false">Not yet</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+    </div>
+  </solution>
+</problem>

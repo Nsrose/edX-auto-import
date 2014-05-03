@@ -1,0 +1,17 @@
+<problem markdown="Which of the following algorithms are not correct?&#10;     (x) An algorithm that counts time forever&#10;     ( ) An algorithm that measures the length of a word&#10;     ( ) An algorithm that turns on the lights in your room at 8pm&#10;     ( ) None of the above&#10;     &#10;[explanation]&#10;An algorithm that counts time runs forever, just like a timer. So it is not a corret algorithm. It is equivalent a counter from 0 to infinity. However, the 3rd option is a correct algorithm, because it runs once every day at 8pm, not forever.&#10;[explanation]&#10;" display_name="Quiz 7.2" showanswer="finished">
+  <p>Which of the following algorithms are not correct?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">An algorithm that counts time forever</choice>
+      <choice correct="false">An algorithm that measures the length of a word</choice>
+      <choice correct="false">An algorithm that turns on the lights in your room at 8pm</choice>
+      <choice correct="false">None of the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>An algorithm that counts time runs forever, just like a timer. So it is not a corret algorithm. It is equivalent a counter from 0 to infinity. However, the 3rd option is a correct algorithm, because it runs once every day at 8pm, not forever.</p>
+    </div>
+  </solution>
+</problem>

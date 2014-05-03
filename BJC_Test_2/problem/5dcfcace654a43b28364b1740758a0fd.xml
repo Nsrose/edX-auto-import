@@ -1,0 +1,29 @@
+<problem markdown="null" display_name="Quiz 3.1" showanswer="finished">
+  <p>Which of the following is NOT a function? These blocks have been taken from Snap!</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">
+        <img src="http://tinyurl.com/mecwjps"/>
+      </choice>
+      <choice correct="false">
+        <img src="http://tinyurl.com/kenda62"/>
+      </choice>
+      <choice correct="false">
+        <img src="http://tinyurl.com/n7ddvkd"/>
+      </choice>
+      <choice correct="false">
+        <img src="http://tinyurl.com/kfakpyt"/>
+      </choice>
+      <choice correct="false">
+        <img src="http://tinyurl.com/m36pjj6"/>
+      </choice>
+      <choice correct="false">None of the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Remember, a function has the property that the same inputs MUST yield the same output. However, the random block violates this idea (it can give you different answers when you run it, which is the whole point of the randomness!). Many believe that the <b>true</b> is not a function, but it certainly is -- it happens to have no inputs and always reports <b>true</b>.</p>
+    </div>
+  </solution>
+</problem>

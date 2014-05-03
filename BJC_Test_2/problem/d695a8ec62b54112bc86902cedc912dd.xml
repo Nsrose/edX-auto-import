@@ -1,0 +1,11 @@
+<problem markdown="What does it mean to have P = NP?&#10;     ( ) Solving a really hard problem in NP&#10;     ( ) Solving a problem in P&#10;     (x) Solving a problem in NP that runs in polynomial time&#10;     ( ) All of the above&#10;&#10;" display_name="Quiz 23.7" showanswer="closed">
+  <p>What does it mean to have P = NP?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Solving a really hard problem in NP</choice>
+      <choice correct="false">Solving a problem in P</choice>
+      <choice correct="true">Solving a problem in NP that runs in polynomial time</choice>
+      <choice correct="false">All of the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

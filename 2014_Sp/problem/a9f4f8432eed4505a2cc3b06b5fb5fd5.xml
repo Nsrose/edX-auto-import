@@ -1,6 +1,0 @@
-<problem display_name="Question 2" markdown="Write your answer for Question 2 here:&#10;&#10;= answer&#10;" showanswer="never">
-  <p>Write your answer for Question 2 here:</p>
-  <stringresponse answer="answer" type="ci">
-    <textline size="20"/>
-  </stringresponse>
-</problem>

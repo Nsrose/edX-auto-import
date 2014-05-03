@@ -1,0 +1,13 @@
+<problem markdown="&gt;&gt;Enter your code&lt;&lt;&#10;&#10;= Michigan&#10;&#10;&#10;[explanation]&#10;Lansing is the capital of Michigan, although it is not Michgan's largest city, &#10;or even the seat of the county in which it resides.&#10;[explanation]&#10;" max_attempts="1" display_name="Text Input">
+  <p>Enter your code</p>
+  <stringresponse answer="Michigan" type="ci">
+    <textline label="Enter your code" size="20"/>
+  </stringresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Lansing is the capital of Michigan, although it is not Michgan's largest city, </p>
+      <p>or even the seat of the county in which it resides.</p>
+    </div>
+  </solution>
+</problem>

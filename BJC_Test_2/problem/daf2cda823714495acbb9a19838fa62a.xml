@@ -1,0 +1,48 @@
+<problem markdown="Test your understanding of base 2. Convert these base 10 numbers to binary.&#10;&#10;7:&#10;= 0111&#10;[explanation]&#10;0 x 2^3 = 0&#10;1 x 2^2 = 4&#10;1 x 2^1 = 2&#10;1 x 2^0 = 1&#10;Total = 7&#10;[explanation]&#10;&#10;16:&#10;= 10000&#10;[explanation]&#10;1 x 2^4 = 16&#10;0 x 2^3 = 0&#10;0 x 2^2 = 0&#10;0 x 2^1 = 0&#10;0 x 2^0 = 0&#10;Total = 16&#10;[explanation]&#10;&#10;33:&#10;= 100001&#10;[explanation]&#10;1 x 2^5 = 32&#10;0 x 2^4 = 0&#10;0 x 2^3 = 0&#10;0 x 2^2 = 0&#10;0 x 2^1 = 0&#10;1 x 2^0 = 1&#10;Total = 33&#10;[explanation]&#10;&#10;" display_name="Convert base 10 to base 2">
+  <p>Test your understanding of base 2. Convert these base 10 numbers to binary.</p>
+  <p>7:</p>
+  <numericalresponse answer="111">
+    <formulaequationinput/>
+  </numericalresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>0 x 2^3 = 0</p>
+      <p>1 x 2^2 = 4</p>
+      <p>1 x 2^1 = 2</p>
+      <p>1 x 2^0 = 1</p>
+      <p>Total = 7</p>
+    </div>
+  </solution>
+  <p>16:</p>
+  <numericalresponse answer="10000">
+    <formulaequationinput/>
+  </numericalresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>1 x 2^4 = 16</p>
+      <p>0 x 2^3 = 0</p>
+      <p>0 x 2^2 = 0</p>
+      <p>0 x 2^1 = 0</p>
+      <p>0 x 2^0 = 0</p>
+      <p>Total = 16</p>
+    </div>
+  </solution>
+  <p>33:</p>
+  <numericalresponse answer="100001">
+    <formulaequationinput/>
+  </numericalresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>1 x 2^5 = 32</p>
+      <p>0 x 2^4 = 0</p>
+      <p>0 x 2^3 = 0</p>
+      <p>0 x 2^2 = 0</p>
+      <p>0 x 2^1 = 0</p>
+      <p>1 x 2^0 = 1</p>
+      <p>Total = 33</p>
+    </div>
+  </solution>
+</problem>

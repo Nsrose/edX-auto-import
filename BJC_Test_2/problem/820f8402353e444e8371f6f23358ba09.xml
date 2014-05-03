@@ -1,0 +1,28 @@
+<problem markdown="null" display_name="Test Yourself: Nested Repeat">
+  <p>1. How many times in total does the script below say "Hip"?</p>
+  <img src="http://bjc.eecs.berkeley.edu/bjc-r/img/prog/hip32.png"/>
+  <numericalresponse answer="6">
+    <formulaequationinput/>
+  </numericalresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Each time through the inner repeat says it twice, and the outer repeat runs the inner one three times, for a total of 3*2=6.</p>
+    </div>
+  </solution>
+  <p>2. How many times in total does the same script say "Hooray"?</p>
+  <numericalresponse answer="3">
+    <formulaequationinput/>
+  </numericalresponse>
+  <p>3. How many times in total does the (different!) script below say "Hip"?</p>
+  <img src="http://bjc.eecs.berkeley.edu/bjc-r/img/prog/hip032.png"/>
+  <numericalresponse answer="0">
+    <formulaequationinput/>
+  </numericalresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The outermost repeat 0 says not to do what's inside it at all!</p>
+    </div>
+  </solution>
+</problem>

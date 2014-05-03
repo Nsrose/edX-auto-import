@@ -1,0 +1,17 @@
+<problem markdown="Select the statement(s) below that is/are false. Check all that apply.&#10;     [x] If a website does not register itself with a DNS server, it cannot be accessed by other computers.&#10;     [x] A DNS server contains the IP address of every web site&#10;     [] For a given website, a DNS server will return a unique IP address.&#10;     [x] If you navigate to www.example.com, you must look in the .com level DNS server to find the IP address&#10;&#10;[explanation]&#10;DNS servers don't assign unique IP addresses to websites.  In this sense, the same IP addresses can be returned when accessing different websites.  On the other hand, when accessing the same website multiple times, you do not necessarily get the same IP address.&#10;[explanation]&#10;" display_name="Multiple Choice" showanswer="finished">
+  <p>Select the statement(s) below that is/are false. Check all that apply.</p>
+  <choiceresponse>
+    <checkboxgroup direction="vertical">
+      <choice correct="true">If a website does not register itself with a DNS server, it cannot be accessed by other computers.</choice>
+      <choice correct="true">A DNS server contains the IP address of every web site</choice>
+      <choice correct="false">For a given website, a DNS server will return a unique IP address.</choice>
+      <choice correct="true">If you navigate to www.example.com, you must look in the .com level DNS server to find the IP address</choice>
+    </checkboxgroup>
+  </choiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>DNS servers don't assign unique IP addresses to websites.  In this sense, the same IP addresses can be returned when accessing different websites.  On the other hand, when accessing the same website multiple times, you do not necessarily get the same IP address.</p>
+    </div>
+  </solution>
+</problem>

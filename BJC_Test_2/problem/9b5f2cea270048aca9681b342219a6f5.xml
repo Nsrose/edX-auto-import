@@ -1,0 +1,18 @@
+<problem markdown="null" display_name="Quiz 3.2" showanswer="finished">
+  <p>Which of the following could be correct, in terms of domain and range, for a function that finds the size of a class, i.e. the number of students in a class? Check all that apply.</p>
+  <choiceresponse>
+    <checkboxgroup direction="vertical">
+      <choice correct="false"><i>Domain:</i> A list of student names, <i>Range:</i> A list of numbers</choice>
+      <choice correct="true"><i>Domain:</i> A list of student ID's, <i>Range:</i> A single number</choice>
+      <choice correct="false"><i>Domain:</i> A list of student ID's, <i>Range:</i> A list of numbers</choice>
+      <choice correct="true"><i>Domain:</i> A list of student names, <i>Range:</i> A single number</choice>
+    </checkboxgroup>
+  </choiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p><b>Domain:</b> Our domain can be either the list of student names or the list of student ID's since both will have the same length, since they are both dependent on the number of students in the class.</p>
+      <p><b>Range:</b> Since the function finds the total number of students in a class, we want to return a single number.</p>
+    </div>
+  </solution>
+</problem>

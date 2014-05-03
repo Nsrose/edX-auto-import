@@ -1,0 +1,17 @@
+<problem markdown="What do the two recursive calls do in the countChange function? Check all that apply.&#10;&#10;[ ] Add coin value to running total&#10;[x] Subtract coin value from total amount&#10;[x] Call countChange with next coin in list&#10;[ ] Delete next coin in list&#10;&#10;     &#10;[explanation]&#10;In looking back at how countChange is constructed, we find the recursive calls in the return block.&#10;[explanation]&#10;" display_name="Count Change" showanswer="finished">
+  <p>What do the two recursive calls do in the countChange function? Check all that apply.</p>
+  <choiceresponse>
+    <checkboxgroup direction="vertical">
+      <choice correct="false">Add coin value to running total</choice>
+      <choice correct="true">Subtract coin value from total amount</choice>
+      <choice correct="true">Call countChange with next coin in list</choice>
+      <choice correct="false">Delete next coin in list</choice>
+    </checkboxgroup>
+  </choiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>In looking back at how countChange is constructed, we find the recursive calls in the return block.</p>
+    </div>
+  </solution>
+</problem>

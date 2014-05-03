@@ -1,0 +1,11 @@
+<problem markdown="How does Twitter determine what followers' receive updates for?&#10;     (x) Two people that follow each other receive each other's updates&#10;     ( ) A Twitter user receives status updates from his followers, even he is not following them&#10;     ( ) Two people following the same person receive each other's status updates even if they are not following each other&#10;     &#10;" display_name="Quiz 21.5">
+  <p>How does Twitter determine what followers' receive updates for?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">Two people that follow each other receive each other's updates</choice>
+      <choice correct="false">A Twitter user receives status updates from his followers, even he is not following them</choice>
+      <choice correct="false">Two people following the same person receive each other's status updates even if they are not following each other</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p>     </p>
+</problem>

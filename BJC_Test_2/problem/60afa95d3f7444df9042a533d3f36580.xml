@@ -1,0 +1,18 @@
+<problem markdown="&lt;img alt=&quot;&quot; src=&quot;/static/linear.png&quot; width=&quot;300px&quot;/&gt;&#10;&#10;&#10;What is the runtime?&#10;     ( ) Constant&#10;     ( ) Logarithmic&#10;     (x) Linear&#10;     ( ) Quadratic&#10;     ( ) Cubic&#10;     &#10;[explanation]&#10;&#10;[explanation]&#10;" display_name="Try It Yourself 1">
+  <img alt="" src="/static/linear.png" width="300px"/>
+  <p>What is the runtime?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Constant</choice>
+      <choice correct="false">Logarithmic</choice>
+      <choice correct="true">Linear</choice>
+      <choice correct="false">Quadratic</choice>
+      <choice correct="false">Cubic</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+    </div>
+  </solution>
+</problem>

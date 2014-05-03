@@ -1,0 +1,17 @@
+<problem markdown="null" display_name="Quiz 2.7" showanswer="finished">
+  <p>Of the four stages of the 3D graphics pipeline listed below, circle the one that is the most different between 3D video games and 3D feature films:</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Modeling</choice>
+      <choice correct="false">Animation</choice>
+      <choice correct="false">Lighting and Shading</choice>
+      <choice correct="true">Rendering</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Rendering for video games is a 30-frames-per-second process. Rendering for video games is often hours (or days) per frame. There are very different rendering algorithms to optimize for speed and quality, respectively.</p>
+    </div>
+  </solution>
+</problem>

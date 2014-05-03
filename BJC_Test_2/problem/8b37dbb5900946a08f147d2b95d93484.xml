@@ -1,0 +1,18 @@
+<problem markdown="What is the order of growth of this implementation of fib(n)?&#10;&#10;     ( ) Constant&#10;     ( ) Logarithmic&#10;     ( ) Linear&#10;     ( ) Quadratic&#10;     (x) Exponential&#10;     &#10;[explanation]&#10;This particular algorithm for fib(n) has tremendous duplication of effort. So much so, that in order to calculate fib(n) for large n, you need fib(n−1) and fib(n−2), whose call trees are roughly equal in size. So, unlike binary search, where you cut the search space in half with every query, here you roughly duplicate the work every time n gets bigger by 1. Thus, this is an exponential time algorithm.&#10;[explanation]&#10;" display_name="Fibonacci" showanswer="finished">
+  <p>What is the order of growth of this implementation of fib(n)?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Constant</choice>
+      <choice correct="false">Logarithmic</choice>
+      <choice correct="false">Linear</choice>
+      <choice correct="false">Quadratic</choice>
+      <choice correct="true">Exponential</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>This particular algorithm for fib(n) has tremendous duplication of effort. So much so, that in order to calculate fib(n) for large n, you need fib(n−1) and fib(n−2), whose call trees are roughly equal in size. So, unlike binary search, where you cut the search space in half with every query, here you roughly duplicate the work every time n gets bigger by 1. Thus, this is an exponential time algorithm.</p>
+    </div>
+  </solution>
+</problem>

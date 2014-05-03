@@ -1,0 +1,23 @@
+<problem markdown="null" display_name="Quiz 3.6" showanswer="finished">
+  <p>Assume we are trying to calculate the sum of all numbers starting from 0 to any number we want. Which of the following recursive functions successfully implements this task?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">
+        <img src="http://tinyurl.com/quiz3-6-1"/>
+      </choice>
+      <choice correct="false">
+        <img src="http://tinyurl.com/quiz3-6-2"/>
+      </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The second choice will always return 0, since we are not calculating the sum, but instead just giving a new input to the function. For example, if our input is 3, this is what our calls would look like:</p>
+      <p>-&gt; 3 is not 0, call function with input 3-1 = 2</p>
+      <p>-&gt; 2 is not 0, call function with input 2-1 = 1</p>
+      <p>-&gt; 1 is not 0, call function with input 1-1 = 0</p>
+      <p>-&gt; 0 is equal to 0, report 0</p>
+    </div>
+  </solution>
+</problem>

@@ -1,0 +1,17 @@
+<problem markdown="Assume we have some theory P. We want to prove that if P holds, then Q happens. We are trying to prove that if theorem P is true the theorem Q is also true. If we did proof by contradiction, which of the following would we want to prove?&#10;     (x) If P is not true then Q is true&#10;     ( ) If Q is true then P is true&#10;     ( ) If P is true then Q is not true&#10;     ( ) If P is not true then Q is not true&#10;     &#10;[explanation]&#10;Proof by contradiction tries to prove the theorem false.&#10;[explanation]&#10;" display_name="Quiz 23.8" showanswer="finished">
+  <p>Assume we have some theory P. We want to prove that if P holds, then Q happens. We are trying to prove that if theorem P is true the theorem Q is also true. If we did proof by contradiction, which of the following would we want to prove?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">If P is not true then Q is true</choice>
+      <choice correct="false">If Q is true then P is true</choice>
+      <choice correct="false">If P is true then Q is not true</choice>
+      <choice correct="false">If P is not true then Q is not true</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Proof by contradiction tries to prove the theorem false.</p>
+    </div>
+  </solution>
+</problem>

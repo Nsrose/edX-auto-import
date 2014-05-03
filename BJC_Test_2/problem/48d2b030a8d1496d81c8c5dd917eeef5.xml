@@ -1,0 +1,21 @@
+<problem markdown="null" display_name="Quiz 8.5" showanswer="finished">
+  <p>Input T for True or F for False for the following statement.</p>
+  <p>Computing some function in parallel is always faster than computing it serially.</p>
+  <stringresponse answer="F" type="ci">
+    <textline size="20"/>
+  </stringresponse>
+  <p>One of the problems of parallelism is that answers may be overwritten in the execution process.</p>
+  <stringresponse answer="T" type="ci">
+    <textline size="20"/>
+  </stringresponse>
+  <p>Parallelism is used to speed up proccesses.</p>
+  <stringresponse answer="T" type="ci">
+    <textline size="20"/>
+  </stringresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Depending on the task, computing a function serially could be faster and easier than in parallel. For example, assume we are trying to bake a cake. It would make sense to mix preheat the oven, mix the ingredients and then bake. You can see how this could go wrong if these steps happened all at once.</p>
+    </div>
+  </solution>
+</problem>

@@ -1,0 +1,26 @@
+<problem markdown="null" display_name="Multiple Choice" showanswer="finished">
+  <p>If I evaluated the blocks below, what would the resulting list be?</p>
+  <img src="http://tinyurl.com/pgtd269"/>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">
+        <img src="http://tinyurl.com/k36fnhg"/>
+      </choice>
+      <choice correct="false">
+        <img src="http://tinyurl.com/ky2kly3"/>
+      </choice>
+      <choice correct="false">
+        <img src="http://tinyurl.com/kj2bpov"/>
+      </choice>
+      <choice correct="true">
+        <img src="http://tinyurl.com/k2m7ocd"/>
+      </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Mappers map data over each element of the list once. Therefore 1+2=3, 4+2=6, and 7+2=9.</p>
+    </div>
+  </solution>
+</problem>

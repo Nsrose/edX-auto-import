@@ -1,0 +1,19 @@
+<problem markdown="Which factor below is the most important when choosing an algorithm?&#10;     ( ) Simplicity&#10;     ( ) Ease to implement&#10;     ( ) Runtime&#10;     ( ) Space complexity (memory)&#10;     ( ) Solution Accuracy&#10;     (x) Each one of the above could be the most important, depending on the situation &#10;     &#10;[explanation]&#10;Any one of these could be the determining factor! Simplest -- when the code might be used as a tutorial. Easiest to implement -- when speed of authoring is most critical. Takes less time -- when runtime performance is most important (e.g., the code has to perform well in real-time, or will be called millions of times as a helper function). Uses up less space -- when space is limited, say on mobile or embedded devices. Gives a more precise answer -- when correctness is critical, say in astrophysics, or when auto-piloting an autonomous vehicle.&#10;[explanation]&#10;" display_name="Quiz 7.1" showanswer="finished">
+  <p>Which factor below is the most important when choosing an algorithm?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Simplicity</choice>
+      <choice correct="false">Ease to implement</choice>
+      <choice correct="false">Runtime</choice>
+      <choice correct="false">Space complexity (memory)</choice>
+      <choice correct="false">Solution Accuracy</choice>
+      <choice correct="true">Each one of the above could be the most important, depending on the situation </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Any one of these could be the determining factor! Simplest -- when the code might be used as a tutorial. Easiest to implement -- when speed of authoring is most critical. Takes less time -- when runtime performance is most important (e.g., the code has to perform well in real-time, or will be called millions of times as a helper function). Uses up less space -- when space is limited, say on mobile or embedded devices. Gives a more precise answer -- when correctness is critical, say in astrophysics, or when auto-piloting an autonomous vehicle.</p>
+    </div>
+  </solution>
+</problem>

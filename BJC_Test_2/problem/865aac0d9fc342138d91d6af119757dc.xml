@@ -1,0 +1,22 @@
+<problem markdown="null" display_name="Quiz 1.3" showanswer="finished">
+  <p>Assume we want to make different colored cupcakes using out brand new cooking machines, which of the following is the best example of Generalization for the cupcake task?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Using a different machine for each cupcake</choice>
+      <choice correct="true">Using a different machine for each color of cupcake</choice>
+      <choice correct="false">Choosing only our two favorite colors and using two different machines for each color of cupcake</choice>
+      <choice correct="false">None of the above</choice>
+      <choice correct="false">All the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Our goal is to produce any color of cupcake we want the fastest and simplest way possible. The third option doesn't satisfy our goal at all. The first choice is just too tedious and expensive. The second choice seems to be the best, because it is less times consuming and simpler that the rest of the choices.</p>
+      <p>What would an even better choice be? Perhaps using only one machine to produce all kinds of colored cucakes. How would that work? The machine would only produce cupcakes, but would have a color setting to choose the color we want. In other words, it would have only one task to do:</p>
+      <p>-&gt; Make cupcake of color "?color?"</p>
+      <p>And then each person INPUT the color of cupcake they want, e.g.:</p>
+      <p>-&gt; Make cucake of color "red"</p>
+    </div>
+  </solution>
+</problem>

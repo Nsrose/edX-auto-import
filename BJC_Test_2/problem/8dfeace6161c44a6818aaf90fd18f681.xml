@@ -1,0 +1,12 @@
+<problem markdown="You can drag other reporters into list input slots to compute the list items?&#10;[[(True), False]]&#10;&#10;[explanation] This is interesting, is it not! [explanation] " max_attempts="null" weight="null" display_name="Dropdown" rerandomize="never" showanswer="always" start="2012-12-11T04:13:00Z">
+  <p>You can drag other reporters into list input slots to compute the list items?</p>
+  <optionresponse>
+    <optioninput options="('True','False')" correct="True"/>
+  </optionresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p> This is interesting, is it not! </p>
+    </div>
+  </solution>
+</problem>

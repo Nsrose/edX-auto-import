@@ -1,0 +1,22 @@
+<problem markdown="Which of the following apply to declarative programming?&#10;     I. The 'how' portion of the computation is important than the 'what'.&#10;     II. The 'what' portion of the computation is important than the 'how'.&#10;     III. Much importance is placed on classifying objects into different groups.&#10;     ( ) I&#10;     (x) II&#10;     ( ) III&#10;     ( ) I and II&#10;     ( ) II and III&#10;     ( ) None of the above&#10;     &#10;[explanation]&#10;Imperative and functional programming both place more importance on 'HOW' a computation is performed rather than 'WHAT' needs to be performed. Object oriented programming focuses on classifying different parts of a program. Declarative programming places more importance on 'WHAT' to execute, and lets the computer figure out the 'HOW.'&#10;[explanation]&#10;" display_name="Quiz 5.6" showanswer="finished">
+  <p>Which of the following apply to declarative programming?</p>
+  <p>     I. The 'how' portion of the computation is important than the 'what'.</p>
+  <p>     II. The 'what' portion of the computation is important than the 'how'.</p>
+  <p>     III. Much importance is placed on classifying objects into different groups.</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">I</choice>
+      <choice correct="true">II</choice>
+      <choice correct="false">III</choice>
+      <choice correct="false">I and II</choice>
+      <choice correct="false">II and III</choice>
+      <choice correct="false">None of the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Imperative and functional programming both place more importance on 'HOW' a computation is performed rather than 'WHAT' needs to be performed. Object oriented programming focuses on classifying different parts of a program. Declarative programming places more importance on 'WHAT' to execute, and lets the computer figure out the 'HOW.'</p>
+    </div>
+  </solution>
+</problem>

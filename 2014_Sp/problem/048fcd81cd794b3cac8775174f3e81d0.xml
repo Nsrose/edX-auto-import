@@ -1,9 +1,0 @@
-<problem display_name="Checkboxes" markdown="&#10;&gt;&gt;Did you complete this reading?&lt;&lt;&#10;&#10;(x) Yes!&#10;( ) Not yet&#10;&#10;">
-  <p>Did you complete this reading?</p>
-  <multiplechoiceresponse>
-    <choicegroup label="Did you complete this reading?" type="MultipleChoice">
-      <choice correct="true">Yes!</choice>
-      <choice correct="false">Not yet</choice>
-    </choicegroup>
-  </multiplechoiceresponse>
-</problem>

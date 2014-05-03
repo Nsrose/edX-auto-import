@@ -1,0 +1,20 @@
+<problem markdown="null" display_name="Quiz 8.6" showanswer="finished">
+  <p>If we execute the code below in parallel, which of the following will happen?</p>
+  <img src="http://tinyurl.com/ng6ylab"/>
+  <p/>
+  <img src="http://tinyurl.com/nf4bd9d"/>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">It will report an error</choice>
+      <choice correct="false">It will report true</choice>
+      <choice correct="true">It will report true or false</choice>
+      <choice correct="false">It will run forever</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>This will cause a race condition. The computer won't know which value of 'global variable' to take, so it will choose one which may not always be consistent. How could we fix this in Snap!?</p>
+    </div>
+  </solution>
+</problem>

@@ -1,0 +1,11 @@
+<problem markdown="What are the three elements of the design cycle?&#10;     ( ) Brainstorm, Implement, Analyze&#10;     (x) Design, Prototype, Evaluate&#10;     ( ) Observe, Prototype, Market&#10;     ( ) Brainstorm, Design, Evaluate" display_name="Multiple Choice">
+  <p>What are the three elements of the design cycle?</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Brainstorm, Implement, Analyze</choice>
+      <choice correct="true">Design, Prototype, Evaluate</choice>
+      <choice correct="false">Observe, Prototype, Market</choice>
+      <choice correct="false">Brainstorm, Design, Evaluate</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

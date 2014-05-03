@@ -1,0 +1,15 @@
+<h1>Time is of the Es-sense</h1>
+<p>We have seen how BYOB can be used to wait for a certain time before reporting anything. Â&nbsp;BYOB also allows us to do the converse: to report how long a program takes to finish. Â&nbsp;In the <tt>Sensing</tt> menu, you will see a command called <tt>reset timer</tt> and a reporter called <tt>timer</tt>:
+	</p>
+<div style="margin-left: 40px;">
+	<img style="width: 88px; height: 46px;" src="http://inst.eecs.berkeley.edu/~cs10/labs/img/lab-8/reset-timer.JPG" alt="Reset Timer Command" title="Reset Timer Command" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab08/Complexity/ResetTimer.jpg"></div>
+<p>Activate (tick-mark) the <tt>timer</tt> reporter and you should see a timer ticking away above Alonzo. Â&nbsp;It's been ticking ever since you opened up BYOB, and counts in tenths of a second:
+</p>
+<div style="margin-left: 40px;">
+	<img style="width: 480px; height: 360px;" src="http://inst.eecs.berkeley.edu/~cs10/labs/img/lab-8/timer-ticking-on-stage-snap.png" alt="Timer ticking away" title="Timer ticking away" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab08/Complexity/TimerTicking.jpg"></div>
+<p>We are going to be performing timing experiments in the following sections, so this timer will prove useful. Add the following timing framework script into the space for BYOB scripts:
+	</p>
+<div style="margin-left: 40px;">
+	<img style="width: 148px; height: 103px;" src="http://inst.eecs.berkeley.edu/~cs10/labs/img/lab-8/timing-framework.png" alt="Timing Framework" title="Timing Framework" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab08/Complexity/TimingFramework.jpg"></div>
+<p>The script will reset the timer whenever the green flag is pressed. Alonzo will then say <tt>Hello!</tt> for 1 second, and soon after that, he will say the current time, less 1 second to account for how long he said <tt>Hello!</tt>. If we replace <tt>Hello!</tt> with a reporter, then Alonzo will say the answer of the reporter, and one second later, how long the reporter took to generate the answer: this is the timing information that we need. Save the script with the name <tt>TimingFramework</tt>
+	</p>

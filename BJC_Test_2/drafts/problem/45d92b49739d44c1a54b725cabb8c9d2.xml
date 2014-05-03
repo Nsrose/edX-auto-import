@@ -1,0 +1,20 @@
+<problem markdown="A text input problem accepts a line of text from the &#10;student, and evaluates the input for correctness based on an expected &#10;answer.&#10;&#10;The answer is correct if it matches every character of the expected answer. This can be a problem with  &#10;international spelling, dates, or anything where the format of the answer is not clear.&#10;&#10;&gt;&gt;Which US state has Lansing as its capital?&lt;&lt;&#10;&#10;= Michigan&#10;&#10;&#10;[explanation]&#10;Lansing is the capital of Michigan, although it is not Michgan's largest city, &#10;or even the seat of the county in which it resides.&#10;[explanation]&#10;" display_name="Text Input">
+  <p>
+
+A text input problem accepts a line of text from the
+student, and evaluates the input for correctness based on an expected
+answer.
+
+The answer is correct if it matches every character of the expected answer. This can be a problem with international spelling, dates, or anything where the format of the answer is not clear. 
+</p>
+  <p>Which US state has Lansing as its capital? </p>
+  <stringresponse answer="Michigan" type="ci">
+    <textline size="20" label="Which US state has Lansing as its capital?"/>
+  </stringresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Lansing is the capital of Michigan, although it is not Michgan's largest city, or even the seat of the county in which it resides.</p>
+    </div>
+  </solution>
+</problem>

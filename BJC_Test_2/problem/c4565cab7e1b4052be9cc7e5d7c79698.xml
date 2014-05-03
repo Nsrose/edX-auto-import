@@ -1,0 +1,25 @@
+<problem markdown="null" display_name="Quick Check">
+  <p>Based on the diagram above, what does the character say if the choice is 1?:</p>
+  <stringresponse answer="rock" type="ci">
+    <textline size="20"/>
+  </stringresponse>
+  <p>Based on the diagram above, what does the character say if the choice is 2?:</p>
+  <stringresponse answer="paper" type="ci">
+    <textline size="20"/>
+  </stringresponse>
+  <p>Based on the diagram above, what does the character say if the choice is 3?:</p>
+  <stringresponse answer="scissors" type="ci">
+    <textline size="20"/>
+  </stringresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The choices are decided by the random number generator.</p>
+      <p>In the diagram:</p>
+      <p>	the duck chose 1, and says <code> rock </code></p>
+      <p>    the cat chose 2, and says <code> paper </code></p>
+      <p>    </p>
+      <p>so for the choice 3, the character must say <code> scissors </code></p>
+    </div>
+  </solution>
+</problem>

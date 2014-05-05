@@ -1,0 +1,42 @@
+<html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title>Simon Says</title> </head> <body> <h1>Simon Says</h1> <p> You've probably played games like Simon Says and Bop-It that involve quickly responding to a series of commands. This <a class="run" href="http://inst.eecs.berkeley.edu/~cs10/labs/prog/robots/finch-simon-says.xml">starter file</a> contains a version of these games, using the finch as a controller. In this version of the game, you'll be asked to turn the finch in a certain direction, which you must quickly do; otherwise, you lose the game (I lost the game!). First, try playing the game a couple of times, then take a look at the code and see how it works. </p> <img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/robots/Simon-Says.jpg" alt="Children playing 'simon says'"/> <img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/robots/bopit.jpg" alt="Bop-It electronic game"/> <p> Now that you understand how the program is working, let's make some modifications! There are two more orientations that the finch can sense, but that haven't yet been included in the game. Figure out what they are and add them as possibilities! Here are a few more ideas to make the game better. Implement your favorites: <ul> <li>At this point, the game still isn't very exciting. Let's give the user more feedback. Have the finch respond with colors, sounds, or talking when the user does something good or bad. </li> <li> Our game is still kind of mean. Change it so the user can miss more than one command before losing (maybe allow them to specify how many "lives" they get). </li> <li> Give the user a score, or record their longest streak of correct responses. </li> </ul> </p> </body> </html>

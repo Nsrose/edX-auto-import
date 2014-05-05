@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml"> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js" ></script> <title> Checking for Leap Years </title> </head> <body> <h1>Leap Year?</h1> <p> A year in our calendar is a leap year&mdash;it has 366 days&mdash;if it is either divisible, with no remainder, by 400 or divisible by 4 but not by 100. Thus 2000 was a leap year (divisible by 400, 100, and 4), 1900 was not (divisible by 100 and 4), 1996 was (divisible by 4), and 1999 (not divisible by anything!) wasn't. </p> <p> Consider the block sets below: they all say <b>"leap year"</b> if the <tt>year</tt> variable is a leap year and <b>"normal year"</b> otherwise.  That is, they all correctly determine if a year is a leap year. </p> <table> <tr> <td>(A)&nbsp;&nbsp;</td> <td><br><img src="http://bjc.berkeley.edu/bjc-r/img/cond/leap-year-script-boolean.png" /><br></td> </tr> <td>(B)&nbsp;&nbsp;</td> <td><br><img src="http://bjc.berkeley.edu/bjc-r/img/cond/leap-year-script-conditional-1.png" /><br></td> </tr> <td>(C)&nbsp;&nbsp;</td> <td><br><img src="http://bjc.berkeley.edu/bjc-r/img/cond/leap-year-script-conditional-2.png" /><br></td> </tr> </table> <p> Form a small group and discuss which version you prefer, and defend your answer.  Which one is easiest to read? (The scripts are available in <a class="run" href="http://bjc.berkeley.edu/bjc-r/prog/conditionals/dates/is-leap-year.xml">this <span class="snap">snap</span> program</a>). </p> </body> </html>

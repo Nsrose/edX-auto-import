@@ -47,7 +47,7 @@ def get_title(filename):
 	"""Grabs the title of the whole lab"""
 	content = open(filename, 'r')
 	title_line = content.readline()
-	return get_inner_content(title_line)
+	return "Lab: " + get_inner_content(title_line)
 
 def insert_title(title, lines):
 	"""Returns a title-inserted version of the html input"""
@@ -262,10 +262,11 @@ def make_html(line):
 	make_companion_xml(name, title)
 	destination = 'html/' + name + ".html"
 	touch(destination)
-	copyfile(absolute_path, destination) 
+	 
 
 	## adding in a title for the lab ##
 	try:
+		copyfile(absolute_path, destination)
 		content = open(destination, 'r')
 		lines = content.readlines() 
 		lines = [x for x in [s.strip() for s in lines] if not x == '']
@@ -348,11 +349,30 @@ def get_quote(name):
 		return "'"
 	return '"'
 
+def remove_comments(lines):
+	"""Removes comments from the topic file"""
+	result = []
+	for line in lines:
+		if not line.startswith('//'):
+			line = remove_inline_comments(line)
+			result += [line]
+	return result
+
+def remove_inline_comments(line):
+	"""Removes inline comments from a single line"""
+	return line.rsplit('//', 1)[0]
+
+
 def make_vertical(name, line):
 	"""makes a vertical file in the vertical folder"""
 	touch("vertical/" + name + ".xml")
 	target = open("vertical/" + name + ".xml", 'a')
-	path_content = line.split()[-1]	
+	path_content = line.split()
+	
+	def is_list(x):
+		return x[0] == '['
+	path_content = list(filter(is_list, path_content))[0]
+
 	title = get_inner_content(line, None, path_content)
 	absolute_path = path_content[2:-1]
 	html_name = absolute_path.rsplit('/', 1)[1][:-5]
@@ -369,6 +389,7 @@ def make_sequential(filename):
 	content = open(filename, 'r')
 	lines = content.readlines()
 	lines = [x for x in [s.strip() for s in lines] if not x == '']
+	lines = remove_comments(lines)
 
 	seq_name = filename[:-6] + ".xml"
 	display_name = get_title(filename)

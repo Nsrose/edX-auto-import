@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <!-- put the following in exactly --> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title>Don't repeat yourself; Let <span class="snap">snap</span> do it for you</title> <!--ORIGINAL NAME: Experiment with Repeat--> </head> <body> <h1>Repeating commands</h1> <p class="code-vid"> <iframe width="560" height="315" src="http://bjc.berkeley.edu///www.youtube.com/embed/jsUN0NV5RfQ" frameborder="0" allowfullscreen></iframe> <br /> Thanks to <a href="http://code.org">code.org</a> for this video! </p> <p> We can use the <img src="http://bjc.berkeley.edu/bjc-r/img/blocks/repeat.png" alt="empty repeat-n block" class="inline" /> block to make drawing shapes a lot easier! You can see below a script to draw a square. </p> <a class="run" href="http://bjc.berkeley.edu/bjc-r/prog/loop/draw-a-square.xml"> <img class="indent" src="http://bjc.berkeley.edu/bjc-r/img/prog/prog-create-square-code-BYOB.gif" alt="Square example image" title="Square example image"> </a> <p class="quoteGreen">There are three different numeric values in the script&mdash;<code>4</code>, <code>100</code>, and <code>90</code>&mdash;that you can think of as <i>parameters</i> that change the resulting picture. Play with the script to understand how each number contributes to the "squareness" of the shape that is drawn.</p> <p>You can click on the picture above to open the script in <span class="snap">snap</span> in another window.</p> </body> </html>

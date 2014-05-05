@@ -1,0 +1,42 @@
+<html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"> <!-- put the following in exactly --> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title> The Data </title> </head> <body> <h1>Text Messages</h1> <p> You are going to work with a set of 500 real text messages, part of a collection recorded and collected by T. Almeida and J. Hidalgo (<a href="http://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection">original source</a>). </p> <p> Two typical lines in our data look like this: <table id="tableBlue" width="80%"> <tr> <td>ham</td> <td>Fair enough, anything going on?</td> </tr> <tr> <td>spam</td> <td>SMS. ac Sptv: The New Jersey Devils and the Detroit Red Wings play Ice Hockey. Correct or Incorrect? End? Reply END SPTV</td> </tr> </table> </p> <p> The raw data is <a href="http://bjc.berkeley.edu/spam-ham-500.txt">here</a>, but we've made a <a class="run" href="http://bjc.berkeley.edu/bjc-r/prog/data/spam-ham.xml">starter <span class="snap">snap</span> project</a> which you should open now.  It has a script that you can run to import the text data (from the above link), split it line by line and then into a list with two entries, and then store it into a variable <code>datasheet</code>:</p> <img class="indent" src="http://bjc.berkeley.edu/bjc-r/img/data/spam-ham-datasheet-watcher.png" alt="spam-ham data watcher variable"> <p> Be aware that this is real-world data with very casual langauge (we've already removed the messages with language that was <i>too</i> casual for a school assignment!) </p> <p class="quoteOrange"> We will call that first word&mdash;spam or ham&mdash; the <i>ground truth classification</i>.  That is, at some point an actual human decided whether this message was spam or ham, and we'll consider this to be "the truth".  In this way, we can see how good our program is at classifying a message, based only on its contents, by comparing it this value. You might actually disagree with some of the "truth" classifications that are in the file; if so, feel free to change them (and be ready to justify your belief to others!) </p> <p>Out of the 500 messages, how many are ham?  Write a script to find out.</p> </body> </html>

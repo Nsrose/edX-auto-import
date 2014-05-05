@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml"> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title>Subsets of a Set</title> </head> <body> <h1>Subsets of a Set</h1> <p>We want to list all the subsets of a given set.</p> <p>A <em>set </em>is an unordered collection of unique things.</p> <p><em>Unordered </em>means that {Apple, Orange, Banana} is the same set as {Banana, Apple, Orange}.</p> <p><em>Unique </em>means that you can't have two of the same thing in a set. Officially, you can write {Apple, Orange, Apple, Banana} and it's the same set as in the previous paragraph, but we'll make the simplifying assumption that there will be no duplicates in the representation of a set.</p> <p>We, of course, represent a set as a list of its <em>elements</em>, which is the official name for the things in a set. A list is an ordered sequence—you can meaningfully ask &quot;what is the third item of this list?&quot; But we'll agree that when using a list to represent a set, order doesn't count.</p> <hr /> <p>A <em>subset </em>of a set is a set all of whose elements are elements of the original set. So, starting with the set {Apple, Orange, Banana} we can find one-element subsets such as {Banana} and two-element subsets such as {Apple, Banana}. We also consider the original set {Apple, Orange, Banana} to be a subset of itself, and so is the <em>empty set </em>{} with no elements.</p> <blockquote> <p>☞ Write down all the subsets of {Apple, Orange, Banana}. How many are there?</p> </blockquote> <p>You're going to write the block <code>subsets</code> that takes a set (a list) as input, and reports a <em>list of lists </em>in which each item is a subset of the input list.</p> <p><img src="http://bjc.berkeley.edu/bjc-r/img/recur/reporters/subset-example.png" alt="subsets of {Apple, Orange, Banana}" /></p> <p>It doesn't matter in what order the subsets appear in the output list, but each subset must appear exactly once.</p> <blockquote> <p>☞ If you prefer to solve puzzles without hints, write <code>subsets</code> now. It's a bit harder than the other examples before this one.</p> </blockquote> </body> </html>

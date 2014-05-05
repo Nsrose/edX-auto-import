@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <!-- put the following in exactly --><script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title> Make a draw polygon Block </title><!--ORIGINAL NAME: Make a "Draw Shape" Block--> </head> <body> <h1>Make a "draw polygon" block</h1> <p> Now, you are going to make a block that takes two inputs. </p> <p> We want to create a <tt>draw polygon</tt> block that takes as inputs: </p> <ol> <li> a number of sides and </li> <li> the length of each side. </li> </ol> <img class="center" src="http://bjc.berkeley.edu/bjc-r/img/prog/polyblock.png" alt="draw polygon () sides of length ()"> <p> In the block, call these inputs <tt>sides</tt> and <tt>length</tt>. This exercise should be done with a partner, so introduce yourself to your neighbor and get started on the exercise together. </p> <p class="quoteOrange"> You should remember from <a href="http://bjc.berkeley.edu/bjc-r/cur/programming/loops/repeat-n/draw-regular-polygons-with-repeat.html">this lesson</a> how to draw a regular polygon. How many degrees altogether? How many turns? </p> <p> Be sure to test out your solution with several polygons, with different lengths and number of sides. </p> </body> </html>

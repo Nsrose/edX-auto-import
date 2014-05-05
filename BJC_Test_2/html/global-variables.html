@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml"> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>Global variables</title><script type="text/javascript" src="http://inst.eecs.berkeley.edu/~cs10/labs/admin/bjc-loader.js"></script> </head> <body> <h1>Global Variables</h1> <p> Sometimes it's not good enough to remember a value inside one script. Instead, you need the value available everywhere in your project. The classic example is the score in a video game; even when no script is running, the score should be remembered.  Another case where you might need to use a global variable would be when a value should be shared among multiple sprites that are interacting in a single program (maybe all of our sprites need a copy of the current game's score for example). </p> <p> There was a time, in the early history of programming languages, when all variables were global. This led to a lot of bugs, because different parts of the program would use the same name for different purposes and erase each others' saved values. So don't use global variables as your first choice; think whether a script variable or a <code>for</code> block (which makes a variable local to just that block) would work instead. </p> <p> To make a global variable, you must go to the Variables palette and click on the <code>Make a variable</code> button (not a block -- you can't put it into a script!): </p> <p><img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/prog/makeavar.png" alt="make a variable button" /></p> <p> You will be prompted to give your variable a name. After you do that, you'll see an orange variable oval in the Variables palette: </p> <p> <img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/prog/myvar.png" alt="my-var button" /> </p> <p> This can be dragged into scripts just like the orange variable ovals in the <code>for</code> block and the <code>script variables</code> block. </p> <p> The checkbox to the left of the variable block determines whether or not the value of the variable is displayed on the stage. The variable <em>watcher </em>(which is what that display is called) can be useful for debugging, or can be displayed permanently so that the user of your project can see the score, or whatever you have in the variable. By right-clicking on the watcher, you can change the format in which it appears on the screen. </p> <p> When you make a global variable, you also get a &quot;Delete a variable&quot; button that can be used for the obvious purpose.? </p> </body> </html>

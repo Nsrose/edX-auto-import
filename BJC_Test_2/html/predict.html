@@ -1,0 +1,42 @@
+<html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title>Predict the output!</title> </head> <body> <h1>Predict what happens!</h1> <p> Below are several blocks that use if and if-else. Predict what each one will do and discuss it with your neighbor. Once you've done so, you try running each of the blocks, which can be found <a class="run" href="http://bjc.berkeley.edu/bjc-r/prog/conditionals/predict-if-functions.xml">here</a>. </p> <p class="quoteblue"> You'll notice that a couple of the scripts below use the <img class="inline" src="http://bjc.berkeley.edu/bjc-r/img/blocks/abs.png" alt="abs ()"/> block. This block actually allows you to use many different mathematical functions. It shows up in the palette as <img class="inline" src="http://bjc.berkeley.edu/bjc-r/img/blocks/sqrt-of-10.png" alt="sqrt (10)"/>. Just click the drop-down menu to select which function to use. "abs" is short for "absolute value." In case you're not already familiar, the absolute value of a number is just that number turned positive. For example, <code>abs(10)</code> is just <code>10</code>, while <code>abs(-2.5)</code> is <code>2.5</code>. </p> <p> <img src="http://bjc.berkeley.edu/bjc-r/img/cond/back-and-forth.png" alt="a mysterious block"/> </p> <p> <img src="http://bjc.berkeley.edu/bjc-r/img/cond/back-and-forth-no-abs.png" alt="a mysterious block"/> </p> <p> <img src="http://bjc.berkeley.edu/bjc-r/img/cond/crenellation.png" alt="a mysterious block"/> </p> <p> <img src="http://bjc.berkeley.edu/bjc-r/img/cond/dvd-player-screen-saver.png" alt="a mysterious block"/> </p>

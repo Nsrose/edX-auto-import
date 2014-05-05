@@ -1,0 +1,42 @@
+<!DOCTYPE html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <html><head><!-- put the following in exactly --> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"> </script><title>Snap! Debug</title><!--ORIGINAL NAME: Snap! Debug--></head><body> <h1>Debugging: Serial vs. Parallel</h1> <p> When you put two "When green flag ..." hat blocks in the same sprite, both will run at the same time! Similarly, if multiple sprites all have "When green flag..." hat blocks, these will run concurrently as well. </p> <p>Open this Snap! file <code><a class="run" href="http://bjc.berkeley.edu/bjc-r/prog/Snap/SerialVsParallelBuggy.xml">SerialVsParallelBuggy</a></code>, and click the green flag. Two things will get drawn: </p> <ul> <li> You will see one 'serial' gold square sprite (ten pixels on a side) paint the area on the right by stamping itself. </li> <li> You will also see two blue 'parallel' 10x10 sprites sharing the labor of painting the area on the left by stamping themselves. </li> </ul> <p> (Two screenshots are included below) The first thing to note is that the parallel side finished in exactly half the time of the serial side. Discuss with your partner why this is. </p> <p> The second thing to note is that there is a slight concurrency bug. The first blue squares for the 1 and 2 sprites appear not to get stamped. Fix this bug so that there are no missing stamps. </p> <p>First, a screenshot taken during computation.</p> <img style="width: 478px; height: 361px;" alt="parallel vs serial start" class="center" src="http://inst.eecs.berkeley.edu/~cs10/labs/img/conc/parallel-vs-serial-start.png"> <p>Second, a screenshot taken after computation has finished.</p> <img style="width: 480px; height: 361px;" alt="parallel vs serial end" class="center" src="http://inst.eecs.berkeley.edu/~cs10/labs/img/conc/parallel-vs-serial-end.png"> </body></html>

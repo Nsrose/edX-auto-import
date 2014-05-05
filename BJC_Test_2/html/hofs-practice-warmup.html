@@ -1,0 +1,42 @@
+<html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title>Warmup-up</title> </head> <body> <h1>Warm-up</h1> <p>Before we dive into the more intense HOFs problems, let's warm up with a few non-HOFs problems. You can find the framework for the rest of the lab in this <a class="run" href="http://inst.eecs.berkeley.edu/~cs10/labs/prog/hofs/hofs-practice-starter-file.xml">starter file</a>. These first few problems are under the "Warmup" sprite. Having these simpler blocks will come in handy later, when we attempt the more complex problems. We realize you may have built these blocks before, but you should build them again anyway! If you already know how to do them iteratively, try them recursively, or vice versa! </p> <p>First, create the block <br/> <img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/hof/list-all-numbers.png" alt="List all numbers between min and max"/> <br/> that takes in a minimum and a maximum, and reports a list of numbers from the minimum to the maximum (both inclusive). So, for example, <br/> <img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/hof/list-all-numbers-5-8.png" alt="List all numbers between 5 and 8"/> <br/> would report the list <br/> <img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/hof/list-5-8.png" alt="(5, 6, 7, 8)"/> <br/> </p> <p>Next, create the block <br/> <img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/hof/word-to-list.png" alt="word to list"/> <br/> that that takes in a word and reports a list of all of the characters in that word. So, for example, <br/> <img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/hof/word-to-list-berkeley.png" alt="word to list 'berkeley'"/> <br/> would report the list <br/> <img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/hof/list-berkeley.png" alt="(b, e, r, k, e, l, e, y)"/> <br/> </p> </body> </html>

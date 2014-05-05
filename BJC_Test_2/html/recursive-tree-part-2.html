@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <!-- put the following in exactly --> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script><title>Recursive Tree Part 2</title> <!--ORIGINAL NAME: Recursive Tree Part 2--> </head> <body> <h1>Recursive Tree Part 2</h1> <p> 4. That <code>tree2a</code> block is pretty long and repetitive. But we can simplify it if we notice that in two places it has a move forward/move back pair of blocks, and that this is what <code>tree1</code> does! So we can use <code>tree1</code> to shorten <code>tree2</code>. Compare the code below to convince yourself that the new <code>tree2</code> will work the same as the original <code>tree2a</code>. <br> </p> <table width="100%" border="1"> <tbody> <tr> <td width="33%" valign="top" style="text-align: center;"><code>tree1 </code><br> </td> <td width="33%" valign="top" style="text-align: center;"><code>tree2a</code> (old version)<br> </td> <td width="33%" valign="top" style="text-align: center;"><code>tree2</code> (new version)<br> </td> </tr> <tr> <td width="33%" valign="top" style="text-align: center;"><img border="0" src="http://bjc.berkeley.edu/bjc-r/img/recur/tree1.png" alt="There should be an image here" title="There should be an image here" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab11/Recurisve_Tree/tree1-script_.jpg"> <br> </td> <td width="33%" valign="top" style="text-align: center;"><img border="0" src="http://bjc.berkeley.edu/bjc-r/img/recur/tree2a.png" alt="There should be an image here" title="There should be an image here" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab11/Recurisve_Tree/tree2-script_.jpg"> <br> </td> <td width="33%" valign="top" style="text-align: center;"><img border="0" title="There should be an image here" alt="There should be an image here" src="http://bjc.berkeley.edu/bjc-r/img/recur/tree2.png" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab11/Recurisve_Tree/tree2aS.jpg"> <br> </td> </tr> </tbody> </table> <br> <p> Note that the tree blocks inside this <code>tree2</code> script are <code>tree1</code> blocks, not <code>tree2</code> blocks! So there's no mysterious <code>tree</code>-using-<code>tree</code> situation here; it's not unusual for one already-written block to be used in <em>another</em> block's script. </p> <p> 5. Make a <code>tree3</code> block that uses the <code>tree2</code> block, on the same pattern, and see if you get the result that you expect. </p> <p> 6. If you can stand it, make a <code>tree4</code> block that uses the <code>tree3</code> block and try it out. </p> <p> <b>This would be a good time to save your project.</b> </p> <p> 7. These blocks all look exactly the same, don't they? So it makes sense to wonder if we can't replace them all with a single <code>tree</code> block. Here's the big idea: We can write a <code>tree</code> block that uses itself in its own script <i>provided that it knows how many levels it's expected to draw!</i> So, in addition to the size input, it'll have a <code>levels</code> input: </p> <p> In the earlier steps, <code>tree3</code> used <code>tree2</code>; <code>tree2</code> used <code>tree1</code>. If you actually had the patience to work up to a <code>tree437</code> block, what block would it call for its two branches? To generalize the pattern, <code>tree</code> will use <code>tree</code>, but reducing the number of levels by 1:</p> <p><img src="http://inst.eecs.berkeley.edu/~cs10/labs/img/recur/tree-nobase.png" alt="recursive tree, first version"></p> <p>Try this out. What happens? <em>Why </em>does it happen? When you know the answer, go to the next activity.</p> </body> </html>

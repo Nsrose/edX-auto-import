@@ -1,0 +1,18 @@
+<html>
+<h1>Overview</h1>
+<h2>Big Ideas</h2>
+<ul>
+<li>Understand the basic components of any computer</li>
+<li>Understand Moore's Law impact on the development of the processors</li>
+<li>Understand parallelism and its limitations in computing</li>
+<li>Explore the history and development of encryption techniques</li>
+</ul>
+<h2>Activites</h2>
+<ul>
+<li>A single sprite has control blocks which appear to respond in parallel (e.g., multiple "when green flag, do...", "when space is clicked, do...", "when I receive broadcast", etc.)</li>
+<li>Multiple sprites only exacerbate the problem, and race conditions could occur (e.g., what if multiple sprites tried to paint the screen their color all at the same time?)</li>
+<li>What happens when multiple signals are sent to the same "when I receive broadcast" block, do all get through? (yes if Broadcast and wait; no, but consistent, if Broadcast and Edit->Thread Safe Scripts checked; no, but inconsistent, if Edit->Thread Safe Scripts unchecked)</li>
+<li>When we call "launch", does that mean another worker starts up? (answer: yes and no)</li>
+<li>The meta learning goal for this part is for you to develop an accurate mental model of how Scratch handles concurrency. This is so you avoid race conditions and deadlock, and so that you can fully exploit it to your benefit!</li>
+</ul>
+</html>

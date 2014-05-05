@@ -1,0 +1,42 @@
+<!DOCTYPE html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <html><head><!-- put the following in exactly --> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script><title>All the Numbers, All the Time</title><!--ORIGINAL NAME: All the Numbers, All the Time--></head><body> <h1>All the Numbers, All the Time</h1> <p> &nbsp;&nbsp;&nbsp;&nbsp;For this section, we will be using <a class="run" href="http://inst.eecs.berkeley.edu/~cs10/labs/prog/algorithms/timing-framework.xml">this timing framework</a>.&nbsp; It is very similar to the framework you constructed earlier, but it also has the stubs for a few blocks that we will be filling in.&nbsp; The first block that we will fill in is already on stage: </p> <div style="margin-left: 40px;"><img style="width: 294px; height: 42px;" title="Insert all numbers between 'start' and 'end' into 'list'" alt="Insert all numbers between 'start' and 'end' into 'list'" src="http://inst.eecs.berkeley.edu/~cs10/labs/img/list/insert-all-numbers-block.png" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab08/Complexity/InsertAllNumbers.jpg"> </div> <p> &nbsp;&nbsp;&nbsp;&nbsp;This block should fill the input list with all of the numbers from <tt>start</tt> to <tt>end</tt>.&nbsp; If working correctly, the version used on stage should generate all of the numbers from <tt>1</tt> to <tt>max</tt>, where <tt>max</tt> is a number that we will change when running timing experiments, and should add them to the <tt>numbers</tt> list. </p> <p> &nbsp;&nbsp;&nbsp;&nbsp;First, talk to your partner and discuss an algorithm that you can use to fill the input list with all of the numbers from <tt>start</tt> to <tt>end</tt>.&nbsp; Once you both have decided on an algorithm, complete the body of the block.&nbsp; Now, run the script with <tt>max</tt> set to <tt>10</tt>.&nbsp; Run it a few times to get an idea of the average time the computer takes to generate this list (to the nearest tenth of a second); you don't need to be exact!&nbsp; Repeat the experiment with <tt>max</tt> set to <tt>20</tt>, <tt>40</tt>, <tt>100</tt>, <tt>200</tt>, and <tt>1000</tt>.&nbsp; Do you see a pattern? </p> </body></html>

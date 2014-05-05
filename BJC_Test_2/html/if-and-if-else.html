@@ -1,0 +1,42 @@
+<html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title>If and If-else</title> </head> <body> <h1>If and If-else</h1> <p> Now that we have the idea of predicates under our belt, we can finally express full "if-then" statements, such as "if the weather is nice, you should go outside." This can be expressed in <span class='snap'>snap</span> using the <img class="inline" src="http://bjc.berkeley.edu/bjc-r/img/blocks/if.png" alt="if"/> block. Notice how the first slot is shaped just like a predicate block. <code>if</code> blocks only know how to handle yes/no questions, so you should only ever put predicate blocks into this slot. The C-shaped part of the <code>if</code> block is where you put the commands that should be run if the condition is true. Let's take a look at an example: </p> <p> <img class="center" src="http://bjc.berkeley.edu/bjc-r/img/cond/mood.png"/> </p> <p> In the above example, we had several possible cases to consider. However, in many situations, there are only two main cases. Take for example, the following sentence: "If a number is divisible by 2, it is even. Otherwise it is odd." For these situations we have the <img class="inline" src="http://bjc.berkeley.edu/bjc-r/img/blocks/if-else.png" alt="if-else"/> block. It works like this: </p> <p> <img class="center" src="http://bjc.berkeley.edu/bjc-r/img/cond/even-or-odd.png"/> </p> <p> Here, we didn't need to have an additional "if," because all whole numbers are either even or odd. If the boolean expression (<code>x mod 2 = 0</code>) evaluates to <code>false</code>, we know that the number is not even and thus must be odd. </p> <p class="quoteorange"> If you haven't seen the <img class="inline" src="http://bjc.berkeley.edu/bjc-r/img/blocks/mod.png" alt="() mod ()"/> block before, it reports the remainder (or "modulus") when the first input is divided by the second. For example, <code>5 mod 2</code> reports <code>1</code> because <code>5 / 2 = 2 remainder 1</code>. This block is especially useful for checking whether a number is divisible by another, because the remainder will be 0. <img class="inline" src="http://bjc.berkeley.edu/bjc-r/img/cond/x-mod-2-equals-0.png" alt="(x mod 2) = 0"/> is the same as asking if <code>x</code> is divisible by 2 (i.e. that <code>x</code> is even). </p> </body> </html>

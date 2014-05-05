@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"> <!-- put the following in exactly --> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title> Classifying SPAM </title> </head> <body> <h1>Predictions!</h1> <p> Now that you know that the average length differs,  build a simple classifier based on the number of words in a particular message. That is, write a block that takes in a message and, based on how many words it contains, returns either "ham" or "spam" as its classification. </p> <img class="center" alt="classify a message that evaluates to HAM" src="http://bjc.berkeley.edu/bjc-r/img/data/classify-by-number-of-words-HAM.png"> <br> <br> <img class="center" alt="classify a message that evaluates to SPAM" src="http://bjc.berkeley.edu/bjc-r/img/data/classify-by-number-of-words-SPAM.png"> <p> Implement in <span class="snap">snap</span>, and use it to classify the messages in our data.  You can use a regular loop to call your classify on the second item in each row of the data, or you might use this <i>faster</i> method using <img class="inline" src="http://bjc.berkeley.edu/bjc-r/img/blocks/keep.png" alt="the keep block">: </p> <img class="indent" alt="using keep to apply a custom classify method to the src="http://bjc.berkeley.edudata"/bjc-r/img/data/count-number-of-spam-messages-with-custom-classify.png"> <div class="quoteBlue"> <p> Answer the following questions: </p> <p class="step"> Play around with different <i>threshold values</i>&mdash; that is, the number of words above which you decide that a message is spam. </p> <p class="step"> What was the best threshold you found? </p> <p class="step"> How many messages did it classify incorrectly? </p> </div> </body> </html>

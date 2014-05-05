@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml"> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title>Recursive Reporters</title> </head> <body> <h1>Recursive Reporters</h1> <p class="redFlag"> Warning: the material in this lab is quite challenging. It is <em>highly</em> recommended that you work with a partner. </p> <p>So far, all our examples of recursion have been <em>command </em>blocks, whose scripts have a structure like this:</p> <p><img src="http://bjc.berkeley.edu/bjc-r/img/recur/reporters/rec-command.png" alt="recursive command pattern" /></p> <p>There can be any number of recursive calls interspersed with other commands in the script.</p> <p>Reporters are slightly trickier, because a reporter can only report <em>one </em>value. So you can't do this:</p> <p><img src="http://bjc.berkeley.edu/bjc-r/img/recur/reporters/bad-rec-reporter.png" alt="bad (multi-report) recursive reporter pattern" /></p> <p>(In fact, Snap<em>!</em> won't let you stack <code>report</code> blocks; since <code>report</code> ends the script, there is no connection tab below the block and you can't put anything directly below it. Optional exercise for hotshots: How did we make that picture?)</p> <p>Instead, most of the time a recursive reporter call will be inside a <em>combiner</em> that attaches the result of the recursive call to some other value:</p> <p><img src="http://bjc.berkeley.edu/bjc-r/img/recur/reporters/rec-reporter.png" alt="correct recursive reporter pattern with combiner" /></p> <p>The combiner can be an arithmetic operator such as <code>+</code> or <code>&times;</code>:</p> <p><img src="http://bjc.berkeley.edu/bjc-r/img/recur/reporters/factorial.png" alt="factorial" /></p> <p>or a text string operator such as <code>join</code> or <code>join words</code>:</p> <p><img src="http://bjc.berkeley.edu/bjc-r/img/recur/reporters/list-to-sentence.png" alt="list-&gt;sentence" /></p> <p>or a list operator such as <code>append</code> or <code>in front of</code>:</p> <p><img src="http://bjc.berkeley.edu/bjc-r/img/recur/reporters/plurals.png" alt="plurals" /></p> <p>Note: On rare occasions, the recursive call <em>does </em>appear directly inside the <code>report</code>:</p> <p><img src="http://bjc.berkeley.edu/bjc-r/img/recur/reporters/piglatin.png" alt="piglatin" /></p> <p>But almost always, you won't go wrong if you start by thinking about what combining block to use.</p> <blockquote> <p>☞ Don't go on until you understand what those four example scripts do, and how they do it.</p> </blockquote> </body> </html>

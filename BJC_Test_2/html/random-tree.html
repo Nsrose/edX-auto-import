@@ -1,0 +1,42 @@
+<!DOCTYPE html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <html><head><!-- put the following in exactly --> <script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script><title>Random Tree</title><!--ORIGINAL NAME: Random Tree--></head><body> <h1>Random Tree</h1> <p> We want to make a tree that looks more random. Here are some pictures of different runs of the program with different levels so that you can see what we were thinking. </p> <div class="center"> <img src="http://bjc.berkeley.edu/bjc-r/img/recur/random-tree1.jpg" alt="" title="" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab11/Random_Tree/Random1.jpg" border="0" height="161" hspace="0" vspace="0" width="189"> <img src="http://bjc.berkeley.edu/bjc-r/img/recur/random-tree2.jpg" alt="There should be an image here" title="There should be an image here" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab11/Random_Tree/Random2.jpg" border="0" height="162" hspace="0" vspace="0" width="194"> <img src="http://bjc.berkeley.edu/bjc-r/img/recur/random-tree3.jpg" alt="There should be an image here" title="There should be an image here" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab11/Random_Tree/Random3.jpg" border="0" height="164" hspace="0" vspace="0" width="200"> </div> <div class="center"> <img src="http://bjc.berkeley.edu/bjc-r/img/recur/random-tree4.jpg" alt="" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab11/Random_Tree/Random4a.jpg" border="0" height="188" hspace="0" vspace="0" width="214"> <img src="http://bjc.berkeley.edu/bjc-r/img/recur/random-tree5.jpg" alt="" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab11/Random_Tree/Random5a.jpg" border="0" height="189" hspace="0" vspace="0" width="200"> <img src="http://bjc.berkeley.edu/bjc-r/img/recur/random-tree6.jpg" alt="" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab11/Random_Tree/Random6a.jpg" border="0" height="207" hspace="0" vspace="0" width="206"> </div> <p> Unfortunately, our attempt (shown below) was unsuccessful (see "tree" on the right). Modify the <code>crazy-tree</code> code to produce the random trees as shown above. </p> <div class="center"> <img style="border: 0px solid ; width: 330px; height: 306px;" src="http://inst.eecs.berkeley.edu/~cs10/labs/img/lab-10/random-tree-buggy-code-snap.png" alt="" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab11/Random_Tree/RandomNotWorkingCode.jpg" hspace="0" vspace="0"> <img src="http://bjc.berkeley.edu/bjc-r/img/recur/random-tree-not-working-BYOB.jpg" alt="There should be an image here" title="There should be an image here" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab11/Random_Tree/RandomNotWorking.jpg" border="0" height="186" hspace="0" vspace="0" width="170"> </div> </body></html>

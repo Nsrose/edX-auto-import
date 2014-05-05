@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> <script>
+function bindEscKey() {
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $('#snap-frame').contents().bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+    if (!$('#snap-toggle').length) {
+        // Adds a snap button at top left portion of screen to toggle snap window.
+        $('body').prepend('<img type="button" id="snap-toggle" type="image" src="http://edge.edx.org/c4x/BerkeleyX/CS10/asset/alonso.png" width="32" height="35" style="-moz-border-radius: 10px; -webkit-border-radius: 40px; opacity: 0.5; position: fixed; top: 11px; left: 9px; z-index: 9999;">');
+
+        // Causes snap iframe to fade in and out when the snap button is clicked.
+        $('#snap-toggle').click(function () {
+            $('#snap-frame').fadeToggle();
+        });
+
+        // Causes transparency of snap-toggle button.
+        $("#snap-toggle").hover(function(){
+            $("#snap-toggle").css("opacity","1");
+        }, function() {
+            $("#snap-toggle").css("opacity","0.5");
+        });
+    }
+
+    if (!$('#snap-frame').length) {
+        // Adds a nearly full screen snap iframe that can be toggled on and off.
+        $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/index.html" sandbox="allow-same-origin allow-forms allow-scripts"></iframe>');
+        $('#snap-frame').hide();
+        $('#snap-frame').height($(window).height());
+        $('#snap-frame').width($(window).width() * 0.958);
+
+        // Escape key toggles snap iframe on and off (visible and hidden) with esc key.
+        $(document).bind('keydown', function(e) {
+            if (e.which == 27) {
+                $('#snap-frame').fadeToggle();
+            }
+        });
+    }
+</script>
+ <head> <!-- put the following in exactly --><script type="text/javascript" src="http://bjc.berkeley.edu/bjc-r/admin/bjc-loader.js"></script> <title> Valid-Date? </title><!--ORIGINAL NAME: Input types--> </head> <body> <h1>Valid-Date?</h1> <p> The procedure shown below checks whether its arguments represent a valid date in the Gregorian calendar (the one we use in the United States).  The calendar was instituted in 1582, so only dates in that year or in the future are legal. Simplify the valid-date block and make it more readable by defining and using well-named helper procedures (hint: Is leap year?). When you are done, there should be more code than when you started, but it should be easier to understand. </p> <a class="run" href="http://bjc.berkeley.edu/bjc-r/prog/building-blocks/valid-date.xml"> <img class="center" alt="messy code for valid-date" src="http://bjc.berkeley.edu/bjc-r/img/building-blocks/valid-date-messy-code.png" > </a> <p> <em>Important:</em> as this example shows there can be huge benefits to using our own custom blocks.  The process in this exercise is aptly referred to as functional decomposition, whereby we break a larger function into smaller pieces and then reassemble the original function. This is one important way that we can build abstractions as the larger function (valid-date?) doesn't need to know what the functions that compose it do, it can just assume that they work.

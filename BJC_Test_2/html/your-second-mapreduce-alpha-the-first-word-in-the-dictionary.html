@@ -28,7 +28,7 @@ function bindEscKey() {
     if (!$('#snap-frame').length) {
         // Adds a nearly full screen snap iframe that can be toggled on and off.
         $('body').prepend('<iframe id="snap-frame" onload="bindEscKey()" class="zoom-in" style="width: 95.8%; height: 100%; position: fixed; right: 0; top: 0; z-index: 9999;" src="/static/snap.html"></iframe>');
-        // $('#snap-frame').hide();
+        $('#snap-frame').hide();
         $('#snap-frame').height($(window).height());
         $('#snap-frame').width($(window).width() * 0.958);
 

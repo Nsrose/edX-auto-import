@@ -3,7 +3,7 @@ from os import listdir
 from os.path import isfile, join
 from shutil import copyfile, move 
 from functools import reduce
-
+from replacer.py import replacer
 
 #########################################
 ## Backend Lab Parser for Berkeley BJC ##
@@ -273,12 +273,13 @@ def make_html(line):
 		lines = insert_title(title, lines)
 		### check for quiz ###
 		for line in lines:
+			line = replacer(line)
 			if "assessment-data" in line:
 				# lines = process_quiz(lines)
 
 				break
 		
-		lines = fix_links(lines)
+		# lines = fix_links(lines)
 		lines = insert_snap(lines)
 		new_file = open(destination, 'w') 
 		new_content = (' ').join(lines)
